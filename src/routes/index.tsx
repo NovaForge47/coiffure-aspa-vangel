@@ -1,10 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import {
-  Hand,
-  Footprints,
-  Sparkles,
+  Scissors,
+  Brush,
   Palette,
+  Sparkles,
+  Crown,
+  Gem,
   Star,
   MapPin,
   Phone,
@@ -12,19 +14,21 @@ import {
   Clock,
   Instagram,
   Facebook,
-  Heart,
+  Calendar,
 } from "lucide-react";
 
-import heroImg from "@/assets/hero-nails.jpg";
-import manicureImg from "@/assets/service-manicure.jpg";
-import pedicureImg from "@/assets/service-pedicure.jpg";
-import gelImg from "@/assets/service-gel.jpg";
-import nailartImg from "@/assets/service-nailart.jpg";
-import gallery1 from "@/assets/gallery-1.jpg";
-import gallery2 from "@/assets/gallery-2.jpg";
-import gallery3 from "@/assets/gallery-3.jpg";
-import gallery4 from "@/assets/gallery-4.jpg";
-import salonInterior from "@/assets/salon-interior.jpg";
+import heroImg from "@/assets/hero-hair.jpg";
+import coloringImg from "@/assets/service-coloring.jpg";
+import makeupImg from "@/assets/service-makeup.jpg";
+import femaleCutImg from "@/assets/service-female-cut.jpg";
+import maleCutImg from "@/assets/service-male-cut.jpg";
+import extensionsImg from "@/assets/service-extensions.jpg";
+import microringsImg from "@/assets/service-microrings.jpg";
+import gallery1 from "@/assets/hair-gallery-1.jpg";
+import gallery2 from "@/assets/hair-gallery-2.jpg";
+import gallery3 from "@/assets/hair-gallery-3.jpg";
+import gallery4 from "@/assets/hair-gallery-4.jpg";
+import salonInterior from "@/assets/salon-interior-hair.jpg";
 
 export const Route = createFileRoute("/")({
   component: Home,
@@ -32,181 +36,211 @@ export const Route = createFileRoute("/")({
 
 const services = [
   {
-    title: "Manicure",
-    desc: "Κλασικό ή spa manicure με βαθιά ενυδάτωση και τέλειο φινίρισμα που διαρκεί.",
-    img: manicureImg,
-    icon: Hand,
-    price: "από €18",
-  },
-  {
-    title: "Pedicure",
-    desc: "Spa pedicure με peeling, μάσκα και massage. Νιώσε τα πόδια σου να αναγεννιούνται.",
-    img: pedicureImg,
-    icon: Footprints,
-    price: "από €25",
-  },
-  {
-    title: "Gel Nails",
-    desc: "Ημιμόνιμη βαφή ή χτίσιμο με gel premium qualität, διάρκεια έως 4 εβδομάδες.",
-    img: gelImg,
-    icon: Sparkles,
-    price: "από €30",
-  },
-  {
-    title: "Nail Art",
-    desc: "Από minimal gold lines μέχρι 3D σχέδια — μοναδικά designs φτιαγμένα για σένα.",
-    img: nailartImg,
+    title: "Βαφές & Ανταύγειες",
+    desc: "Balayage, ombré, ολική βαφή και πολύχρωμες ανταύγειες με premium χρώματα χωρίς αμμωνία.",
+    img: coloringImg,
     icon: Palette,
-    price: "από €5/νύχι",
+    price: "€45 – €120",
+  },
+  {
+    title: "Makeup",
+    desc: "Day, evening, bridal makeup από επαγγελματίες με υψηλής ποιότητας προϊόντα μακράς διάρκειας.",
+    img: makeupImg,
+    icon: Brush,
+    price: "€40 – €90",
+  },
+  {
+    title: "Γυναικείο Κούρεμα",
+    desc: "Κούρεμα σχεδιασμένο γύρω από το πρόσωπο και τον τρόπο ζωής σου, με λούσιμο και styling.",
+    img: femaleCutImg,
+    icon: Scissors,
+    price: "€25 – €45",
+  },
+  {
+    title: "Ανδρικό Κούρεμα",
+    desc: "Classic, modern ή fade κουρέματα με ξύρισμα κλασικού στυλ και περιποίηση γενιού.",
+    img: maleCutImg,
+    icon: Crown,
+    price: "€18 – €28",
+  },
+  {
+    title: "Hair Extensions",
+    desc: "Φυσικά Remy extensions σε όλα τα μήκη και χρώματα. Συμβουλευτική και τοποθέτηση από ειδικούς.",
+    img: extensionsImg,
+    icon: Sparkles,
+    price: "€180 – €650",
+  },
+  {
+    title: "Micro Rings",
+    desc: "Διακριτική, μη-κολλητική τεχνική για όγκο και μήκος που διαρκεί έως 6 μήνες χωρίς ζημιά.",
+    img: microringsImg,
+    icon: Gem,
+    price: "€220 – €550",
   },
 ];
 
 const testimonials = [
   {
     name: "Μαρία Παπαδοπούλου",
-    text: "Τα πιο όμορφα νύχια που είχα ποτέ. Το gel κρατάει 4 εβδομάδες χωρίς να σπάει και ο χώρος είναι ονειρικός.",
-    role: "Πελάτισσα από το 2022",
+    text: "Η Άσπα είναι μάστερ στο balayage. Το χρώμα κράτησε μήνες, τα μαλλιά μου ποτέ δεν ήταν τόσο υγιή και λαμπερά.",
+    role: "Πελάτισσα από το 2019",
   },
   {
-    name: "Ελένη Κωνσταντίνου",
-    text: "Επαγγελματισμός, καθαριότητα και τέλειο αποτέλεσμα κάθε φορά. Η Σοφία είναι μάγισσα με το nail art!",
+    name: "Κατερίνα Νικολάου",
+    text: "Έβαλα extensions και κανείς δεν καταλαβαίνει ότι δεν είναι δικά μου. Επαγγελματισμός σε άλλο επίπεδο.",
     role: "Πελάτισσα από το 2021",
   },
   {
-    name: "Άννα Δημητρίου",
-    text: "Νυφικά νύχια ονειρικά. Όλες οι καλεσμένες ρωτούσαν πού τα έκανα. Συστήνω ανεπιφύλακτα!",
-    role: "Πελάτισσα από το 2023",
+    name: "Γιώργος Αντωνίου",
+    text: "Ο Βαγγέλης είναι ο μόνος που έχω εμπιστευτεί τα μαλλιά μου τα τελευταία 5 χρόνια. Πάντα τέλειο αποτέλεσμα.",
+    role: "Πελάτης από το 2020",
   },
 ];
 
 const gallery = [
-  { src: gallery1, label: "Before / After" },
-  { src: gallery2, label: "Chrome Pink" },
-  { src: gallery3, label: "Bridal Lace" },
-  { src: gallery4, label: "Minimal Gold" },
-  { src: nailartImg, label: "Floral Art" },
-  { src: gelImg, label: "Glossy Nude" },
+  { src: gallery1, label: "Color Swatches" },
+  { src: gallery2, label: "Copper Glow" },
+  { src: gallery3, label: "The Salon" },
+  { src: gallery4, label: "Styling Tools" },
+  { src: extensionsImg, label: "Extensions" },
+  { src: microringsImg, label: "Micro Rings" },
+];
+
+const hours = [
+  ["Δευτέρα", "Κλειστά"],
+  ["Τρίτη – Παρασκευή", "09:00 – 21:00"],
+  ["Σάββατο", "09:00 – 18:00"],
+  ["Κυριακή", "Κλειστά"],
 ];
 
 function Home() {
-  const [form, setForm] = useState({ name: "", phone: "", service: "", message: "" });
+  const [form, setForm] = useState({ name: "", phone: "", service: "", date: "", message: "" });
   const [sent, setSent] = useState(false);
+  const [contact, setContact] = useState({ name: "", email: "", message: "" });
+  const [contactSent, setContactSent] = useState(false);
 
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* NAV */}
-      <header className="fixed top-0 z-50 w-full backdrop-blur-md bg-background/70 border-b border-border/50">
+      <header className="fixed top-0 z-50 w-full backdrop-blur-md bg-onyx/85 border-b border-gold/15">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-          <a href="#top" className="flex flex-col leading-none">
-            <span className="font-script text-2xl text-rose-gold-deep">Pour Moi</span>
-            <span className="font-display text-lg tracking-[0.3em] text-foreground -mt-1">NAILS</span>
+          <a href="#top" className="flex flex-col leading-none text-ivory">
+            <span className="font-script text-2xl text-gold">Coiffure</span>
+            <span className="font-display text-base tracking-luxury -mt-1">ASPA & VANGEL</span>
           </a>
-          <nav className="hidden md:flex items-center gap-8 text-sm tracking-wider uppercase">
-            <a href="#services" className="hover:text-rose-gold-deep transition">Υπηρεσίες</a>
-            <a href="#gallery" className="hover:text-rose-gold-deep transition">Gallery</a>
-            <a href="#testimonials" className="hover:text-rose-gold-deep transition">Κριτικές</a>
-            <a href="#contact" className="hover:text-rose-gold-deep transition">Επικοινωνία</a>
+          <nav className="hidden md:flex items-center gap-8 text-xs tracking-luxury uppercase text-ivory/85">
+            <a href="#services" className="hover:text-gold transition">Υπηρεσίες</a>
+            <a href="#gallery" className="hover:text-gold transition">Gallery</a>
+            <a href="#testimonials" className="hover:text-gold transition">Κριτικές</a>
+            <a href="#contact" className="hover:text-gold transition">Επικοινωνία</a>
           </nav>
           <a
             href="#booking"
-            className="hidden sm:inline-flex items-center rounded-full bg-gradient-rose px-5 py-2.5 text-sm tracking-wider text-primary-foreground shadow-soft hover:opacity-90 transition"
+            className="hidden sm:inline-flex items-center gap-2 rounded-none border border-gold/60 bg-gold/10 px-5 py-2.5 text-xs tracking-luxury text-gold hover:bg-gold hover:text-onyx transition"
           >
-            Κλείσε Ραντεβού
+            <Calendar className="h-3.5 w-3.5" />
+            Ραντεβού
           </a>
         </div>
       </header>
 
       {/* HERO */}
-      <section id="top" className="relative min-h-screen flex items-center pt-24 pb-12 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-soft" />
-        <div className="absolute -top-32 -left-32 h-96 w-96 rounded-full bg-blush blur-3xl opacity-70" />
-        <div className="absolute -bottom-32 -right-32 h-96 w-96 rounded-full bg-rose-gold-light blur-3xl opacity-60" />
+      <section id="top" className="relative min-h-screen flex items-center pt-24 pb-12 overflow-hidden bg-gradient-onyx text-ivory">
+        <div className="absolute inset-0 opacity-30">
+          <div className="absolute -top-40 -left-40 h-[500px] w-[500px] rounded-full bg-gold-deep blur-[120px]" />
+          <div className="absolute -bottom-40 -right-40 h-[500px] w-[500px] rounded-full bg-gold blur-[120px] opacity-50" />
+        </div>
 
         <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-6 lg:grid-cols-[1.1fr_1fr]">
           <div>
-            <div className="flex items-center gap-3 mb-6">
-              <span className="h-px w-12 bg-rose-gold" />
-              <span className="font-script text-2xl text-rose-gold-deep">Premium Nail Salon · Athens</span>
+            <div className="flex items-center gap-3 mb-8">
+              <span className="h-px w-12 bg-gold" />
+              <span className="font-script text-2xl text-gold">Coiffure since 2003</span>
             </div>
-            <h1 className="font-display text-5xl md:text-7xl lg:text-8xl leading-[1.05] text-foreground">
-              Τέλεια Νύχια <em className="italic text-gradient-rose">Κάθε</em> Φορά
+            <h1 className="font-display text-5xl md:text-7xl lg:text-[5.5rem] leading-[1.02] text-ivory">
+              Η Ομορφιά σου<br />
+              στα <em className="italic text-gradient-gold">Καλύτερά</em> της
             </h1>
-            <p className="mt-8 max-w-xl text-lg text-muted-foreground leading-relaxed">
-              Στο Pour Moi Nails, κάθε ραντεβού είναι μια στιγμή φροντίδας μόνο για σένα. Έμπειρες nail
-              artists, premium προϊόντα και αυστηρά πρωτόκολλα υγιεινής στην καρδιά της Αθήνας.
+            <p className="mt-8 max-w-xl text-lg text-ivory/70 leading-relaxed font-light">
+              Στο Coiffure Aspa & Vangel συνδυάζουμε 20+ χρόνια εμπειρίας, διεθνείς τεχνικές και
+              premium προϊόντα για να αποκαλύψουμε την πιο εκλεπτυσμένη εκδοχή σου — στην καρδιά της Αθήνας.
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-4">
               <a
                 href="#booking"
-                className="inline-flex items-center gap-2 rounded-full bg-gradient-rose px-8 py-4 text-base tracking-wider text-primary-foreground shadow-elegant hover:scale-[1.02] transition"
+                className="inline-flex items-center gap-3 bg-gold px-9 py-4 text-sm tracking-luxury text-onyx shadow-gold hover:bg-gold-light transition"
               >
                 Online Booking
-                <Sparkles className="h-4 w-4" />
+                <Calendar className="h-4 w-4" />
               </a>
               <a
                 href="#services"
-                className="inline-flex items-center gap-2 rounded-full border border-rose-gold/40 px-8 py-4 text-base tracking-wider text-rose-gold-deep hover:bg-rose-gold-light/30 transition"
+                className="inline-flex items-center gap-2 border border-gold/40 px-9 py-4 text-sm tracking-luxury text-gold hover:bg-gold/10 transition"
               >
-                Δες τις Υπηρεσίες
+                Οι Υπηρεσίες μας
               </a>
             </div>
 
-            <div className="mt-14 grid grid-cols-3 gap-6 max-w-md">
+            <div className="mt-16 grid grid-cols-3 gap-6 max-w-md border-t border-gold/20 pt-8">
               {[
-                ["10+", "Χρόνια εμπειρίας"],
+                ["20+", "Χρόνια εμπειρίας"],
                 ["4.9★", "Google Reviews"],
-                ["5K+", "Happy Clients"],
+                ["8K+", "Happy Clients"],
               ].map(([k, v]) => (
                 <div key={k}>
-                  <div className="font-display text-3xl text-rose-gold-deep">{k}</div>
-                  <div className="text-xs uppercase tracking-wider text-muted-foreground mt-1">{v}</div>
+                  <div className="font-display text-4xl text-gold">{k}</div>
+                  <div className="text-[10px] uppercase tracking-luxury text-ivory/60 mt-2">{v}</div>
                 </div>
               ))}
             </div>
           </div>
 
           <div className="relative">
-            <div className="absolute -inset-4 bg-gradient-rose rounded-[2rem] opacity-25 blur-2xl" />
-            <div className="relative overflow-hidden rounded-[2rem] shadow-elegant">
+            <div className="absolute -inset-1 bg-gradient-gold opacity-40 blur-2xl" />
+            <div className="relative overflow-hidden border border-gold/30">
               <img
                 src={heroImg}
-                alt="Pour Moi Nails — premium nail polish editorial"
-                className="h-[600px] w-full object-cover"
-                width={1080}
+                alt="Coiffure Aspa & Vangel — luxury hair editorial"
+                className="h-[640px] w-full object-cover"
+                width={1088}
                 height={1440}
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-onyx/60 via-transparent to-transparent" />
             </div>
-            <div className="absolute -bottom-6 -left-6 bg-card rounded-2xl p-5 shadow-soft border border-border max-w-[230px]">
-              <div className="flex items-center gap-1 text-rose-gold-deep">
+            <div className="absolute -bottom-6 -left-6 bg-onyx border border-gold/30 p-5 max-w-[240px]">
+              <div className="flex items-center gap-1 text-gold">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="h-4 w-4 fill-current" />
+                  <Star key={i} className="h-3.5 w-3.5 fill-current" />
                 ))}
               </div>
-              <p className="mt-2 text-sm text-foreground italic">"Τα πιο τέλεια νύχια στην Αθήνα."</p>
+              <p className="mt-3 text-sm text-ivory italic font-display">
+                "Master craftsmanship & ατέλειωτη προσοχή στη λεπτομέρεια."
+              </p>
             </div>
           </div>
         </div>
       </section>
 
       {/* SERVICES */}
-      <section id="services" className="py-28 bg-cream">
+      <section id="services" className="py-32 bg-ivory">
         <div className="mx-auto max-w-7xl px-6">
           <div className="text-center max-w-2xl mx-auto mb-20">
-            <span className="font-script text-2xl text-rose-gold-deep">Οι Υπηρεσίες μας</span>
-            <h2 className="font-display text-5xl md:text-6xl mt-3">Φτιαγμένες για σένα</h2>
-            <p className="mt-5 text-muted-foreground">
-              Από το πιο διακριτικό nude μέχρι το πιο εντυπωσιακό nail art — η ομάδα μας δημιουργεί
-              αποτελέσματα που σε κάνουν να λάμπεις.
+            <span className="font-script text-2xl text-gold-deep">Οι Υπηρεσίες μας</span>
+            <h2 className="font-display text-5xl md:text-6xl mt-2">Τέχνη & Τεχνική</h2>
+            <div className="mx-auto mt-6 h-px w-16 bg-gold" />
+            <p className="mt-6 text-muted-foreground font-light">
+              Από το πιο διακριτικό κούρεμα μέχρι την πιο τολμηρή βαφή — κάθε υπηρεσία προσαρμοσμένη
+              στο πρόσωπο, το στυλ και τη ρουτίνα σου.
             </p>
           </div>
 
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {services.map((s) => {
               const Icon = s.icon;
               return (
                 <article
                   key={s.title}
-                  className="group bg-card rounded-3xl overflow-hidden shadow-soft hover:shadow-elegant transition-all duration-500 hover:-translate-y-2"
+                  className="group bg-card border border-border overflow-hidden hover:border-gold/60 transition-all duration-500"
                 >
                   <div className="relative h-72 overflow-hidden">
                     <img
@@ -215,18 +249,18 @@ function Home() {
                       loading="lazy"
                       width={1024}
                       height={1280}
-                      className="h-full w-full object-cover group-hover:scale-110 transition-transform duration-700"
+                      className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-700"
                     />
-                    <div className="absolute top-4 left-4 h-12 w-12 rounded-full bg-background/90 backdrop-blur flex items-center justify-center">
-                      <Icon className="h-5 w-5 text-rose-gold-deep" />
+                    <div className="absolute top-4 left-4 h-11 w-11 bg-onyx/85 border border-gold/40 flex items-center justify-center">
+                      <Icon className="h-4 w-4 text-gold" />
                     </div>
                   </div>
-                  <div className="p-6">
-                    <div className="flex items-baseline justify-between gap-3">
+                  <div className="p-7">
+                    <div className="flex items-baseline justify-between gap-3 border-b border-border pb-4">
                       <h3 className="font-display text-2xl">{s.title}</h3>
-                      <span className="text-sm text-rose-gold-deep font-medium whitespace-nowrap">{s.price}</span>
+                      <span className="text-sm text-gold-deep font-medium whitespace-nowrap tracking-wider">{s.price}</span>
                     </div>
-                    <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
+                    <p className="mt-4 text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
                   </div>
                 </article>
               );
@@ -236,24 +270,25 @@ function Home() {
       </section>
 
       {/* GALLERY */}
-      <section id="gallery" className="py-28 bg-background">
+      <section id="gallery" className="py-32 bg-background">
         <div className="mx-auto max-w-7xl px-6">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
             <div>
-              <span className="font-script text-2xl text-rose-gold-deep">Before & After</span>
-              <h2 className="font-display text-5xl md:text-6xl mt-3">Δουλειές που Μιλούν</h2>
+              <span className="font-script text-2xl text-gold-deep">Atelier</span>
+              <h2 className="font-display text-5xl md:text-6xl mt-2">Στιγμές από το Salon</h2>
             </div>
-            <p className="max-w-md text-muted-foreground">
-              Κάθε εικόνα είναι μια ιστορία μεταμόρφωσης. Δες λίγες από τις πιο πρόσφατες δημιουργίες μας.
+            <p className="max-w-md text-muted-foreground font-light">
+              Χρώματα, υφές, εργαλεία και χώροι — τα στοιχεία που συνθέτουν την εμπειρία Coiffure
+              Aspa & Vangel.
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 auto-rows-[200px]">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 auto-rows-[200px]">
             {gallery.map((item, i) => (
               <div
                 key={i}
-                className={`relative overflow-hidden rounded-2xl shadow-soft group ${
-                  i === 0 ? "col-span-2 row-span-2" : i === 3 ? "lg:col-span-2" : ""
+                className={`relative overflow-hidden group ${
+                  i === 0 ? "col-span-2 row-span-2" : i === 2 ? "lg:col-span-2" : ""
                 }`}
               >
                 <img
@@ -264,8 +299,8 @@ function Home() {
                   height={1024}
                   className="h-full w-full object-cover group-hover:scale-110 transition duration-700"
                 />
-                <div className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-foreground/70 to-transparent opacity-0 group-hover:opacity-100 transition">
-                  <span className="text-background text-sm tracking-wider uppercase">{item.label}</span>
+                <div className="absolute inset-0 bg-onyx/40 opacity-0 group-hover:opacity-100 transition flex items-end p-5">
+                  <span className="text-ivory text-xs tracking-luxury uppercase border-b border-gold pb-1">{item.label}</span>
                 </div>
               </div>
             ))}
@@ -274,34 +309,35 @@ function Home() {
       </section>
 
       {/* TESTIMONIALS */}
-      <section id="testimonials" className="py-28 bg-gradient-soft">
+      <section id="testimonials" className="py-32 bg-gradient-onyx text-ivory">
         <div className="mx-auto max-w-7xl px-6">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="font-script text-2xl text-rose-gold-deep">Κριτικές</span>
-            <h2 className="font-display text-5xl md:text-6xl mt-3">Τι λένε για εμάς</h2>
+            <span className="font-script text-2xl text-gold">Μαρτυρίες</span>
+            <h2 className="font-display text-5xl md:text-6xl mt-2 text-ivory">Τι λένε για εμάς</h2>
+            <div className="mx-auto mt-6 h-px w-16 bg-gold" />
           </div>
 
           <div className="grid gap-8 md:grid-cols-3">
             {testimonials.map((t) => (
               <div
                 key={t.name}
-                className="bg-card rounded-3xl p-8 shadow-soft border border-border/60 flex flex-col"
+                className="bg-onyx/60 border border-gold/20 p-9 flex flex-col backdrop-blur-sm"
               >
-                <div className="flex items-center gap-1 text-rose-gold-deep mb-5">
+                <div className="flex items-center gap-1 text-gold mb-5">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 fill-current" />
+                    <Star key={i} className="h-4 w-4 fill-current" />
                   ))}
                 </div>
-                <p className="font-display text-xl italic leading-relaxed text-foreground flex-1">
+                <p className="font-display text-xl italic leading-relaxed text-ivory flex-1">
                   "{t.text}"
                 </p>
-                <div className="mt-6 pt-6 border-t border-border flex items-center gap-3">
-                  <div className="h-10 w-10 rounded-full bg-gradient-rose flex items-center justify-center text-primary-foreground font-display text-lg">
+                <div className="mt-7 pt-6 border-t border-gold/20 flex items-center gap-3">
+                  <div className="h-10 w-10 border border-gold/60 flex items-center justify-center text-gold font-display text-lg">
                     {t.name.charAt(0)}
                   </div>
                   <div>
-                    <div className="font-medium">{t.name}</div>
-                    <div className="text-xs text-muted-foreground">{t.role}</div>
+                    <div className="font-medium text-ivory text-sm">{t.name}</div>
+                    <div className="text-xs text-ivory/55 tracking-wider mt-0.5">{t.role}</div>
                   </div>
                 </div>
               </div>
@@ -310,22 +346,23 @@ function Home() {
         </div>
       </section>
 
-      {/* CONTACT + LOCATION */}
-      <section id="contact" className="py-28 bg-background">
+      {/* BOOKING + LOCATION */}
+      <section id="contact" className="py-32 bg-background">
         <div className="mx-auto max-w-7xl px-6 grid gap-16 lg:grid-cols-2">
           <div id="booking">
-            <span className="font-script text-2xl text-rose-gold-deep">Online Booking</span>
-            <h2 className="font-display text-5xl md:text-6xl mt-3">Κλείσε το ραντεβού σου</h2>
-            <p className="mt-5 text-muted-foreground max-w-md">
-              Συμπλήρωσε τη φόρμα και η ομάδα μας θα επικοινωνήσει μαζί σου μέσα σε λίγες ώρες για να
-              επιβεβαιώσει ημερομηνία και ώρα.
+            <span className="font-script text-2xl text-gold-deep">Online Booking</span>
+            <h2 className="font-display text-5xl md:text-6xl mt-2">Κλείσε το ραντεβού σου</h2>
+            <div className="mt-6 h-px w-16 bg-gold" />
+            <p className="mt-6 text-muted-foreground max-w-md font-light">
+              Συμπλήρωσε τη φόρμα και η ομάδα μας θα επικοινωνήσει μαζί σου μέσα σε λίγες ώρες
+              για να επιβεβαιώσει ημερομηνία και ώρα.
             </p>
 
             {sent ? (
-              <div className="mt-10 rounded-2xl bg-rose-gold-light/40 border border-rose-gold/30 p-8 text-center">
-                <Heart className="mx-auto h-8 w-8 text-rose-gold-deep fill-current" />
+              <div className="mt-10 border border-gold/40 bg-gold/5 p-8 text-center">
+                <Sparkles className="mx-auto h-8 w-8 text-gold-deep" />
                 <p className="mt-3 font-display text-2xl">Ευχαριστούμε!</p>
-                <p className="text-muted-foreground mt-2">Θα σε καλέσουμε πολύ σύντομα.</p>
+                <p className="text-muted-foreground mt-2 text-sm">Θα σε καλέσουμε πολύ σύντομα.</p>
               </div>
             ) : (
               <form
@@ -335,122 +372,135 @@ function Home() {
                 }}
                 className="mt-10 space-y-5"
               >
-                <div>
-                  <label className="block text-xs uppercase tracking-wider text-muted-foreground mb-2">Όνομα</label>
-                  <input
-                    required
-                    value={form.name}
-                    onChange={(e) => setForm({ ...form, name: e.target.value })}
-                    className="w-full rounded-full border border-input bg-card px-5 py-3.5 focus:outline-none focus:border-rose-gold transition"
-                    placeholder="Το όνομά σου"
-                  />
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-[10px] uppercase tracking-luxury text-muted-foreground mb-2">Όνομα</label>
+                    <input
+                      required
+                      value={form.name}
+                      onChange={(e) => setForm({ ...form, name: e.target.value })}
+                      className="w-full border border-input bg-card px-4 py-3 focus:outline-none focus:border-gold transition"
+                      placeholder="Το όνομά σου"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-[10px] uppercase tracking-luxury text-muted-foreground mb-2">Τηλέφωνο</label>
+                    <input
+                      required
+                      type="tel"
+                      value={form.phone}
+                      onChange={(e) => setForm({ ...form, phone: e.target.value })}
+                      className="w-full border border-input bg-card px-4 py-3 focus:outline-none focus:border-gold transition"
+                      placeholder="69XXXXXXXX"
+                    />
+                  </div>
+                </div>
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-[10px] uppercase tracking-luxury text-muted-foreground mb-2">Υπηρεσία</label>
+                    <select
+                      required
+                      value={form.service}
+                      onChange={(e) => setForm({ ...form, service: e.target.value })}
+                      className="w-full border border-input bg-card px-4 py-3 focus:outline-none focus:border-gold transition"
+                    >
+                      <option value="">Διάλεξε</option>
+                      {services.map((s) => (
+                        <option key={s.title}>{s.title}</option>
+                      ))}
+                    </select>
+                  </div>
+                  <div>
+                    <label className="block text-[10px] uppercase tracking-luxury text-muted-foreground mb-2">Ημερομηνία</label>
+                    <input
+                      required
+                      type="date"
+                      value={form.date}
+                      onChange={(e) => setForm({ ...form, date: e.target.value })}
+                      className="w-full border border-input bg-card px-4 py-3 focus:outline-none focus:border-gold transition"
+                    />
+                  </div>
                 </div>
                 <div>
-                  <label className="block text-xs uppercase tracking-wider text-muted-foreground mb-2">Τηλέφωνο</label>
-                  <input
-                    required
-                    type="tel"
-                    value={form.phone}
-                    onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                    className="w-full rounded-full border border-input bg-card px-5 py-3.5 focus:outline-none focus:border-rose-gold transition"
-                    placeholder="69XXXXXXXX"
-                  />
-                </div>
-                <div>
-                  <label className="block text-xs uppercase tracking-wider text-muted-foreground mb-2">Υπηρεσία</label>
-                  <select
-                    value={form.service}
-                    onChange={(e) => setForm({ ...form, service: e.target.value })}
-                    className="w-full rounded-full border border-input bg-card px-5 py-3.5 focus:outline-none focus:border-rose-gold transition"
-                  >
-                    <option value="">Διάλεξε υπηρεσία</option>
-                    <option>Manicure</option>
-                    <option>Pedicure</option>
-                    <option>Gel Nails</option>
-                    <option>Nail Art</option>
-                    <option>Συνδυασμός</option>
-                  </select>
-                </div>
-                <div>
-                  <label className="block text-xs uppercase tracking-wider text-muted-foreground mb-2">Σημειώσεις</label>
+                  <label className="block text-[10px] uppercase tracking-luxury text-muted-foreground mb-2">Σημειώσεις</label>
                   <textarea
                     rows={3}
                     value={form.message}
                     onChange={(e) => setForm({ ...form, message: e.target.value })}
-                    className="w-full rounded-3xl border border-input bg-card px-5 py-3.5 focus:outline-none focus:border-rose-gold transition resize-none"
-                    placeholder="π.χ. Gel + nail art Σάββατο πρωί"
+                    className="w-full border border-input bg-card px-4 py-3 focus:outline-none focus:border-gold transition resize-none"
+                    placeholder="π.χ. balayage + κούρεμα, προτιμώ απογευματινή ώρα"
                   />
                 </div>
                 <button
                   type="submit"
-                  className="w-full rounded-full bg-gradient-rose px-8 py-4 text-primary-foreground tracking-wider shadow-elegant hover:scale-[1.01] transition"
+                  className="w-full bg-onyx px-8 py-4 text-ivory text-sm tracking-luxury hover:bg-gold hover:text-onyx transition"
                 >
-                  Στείλε Αίτημα Ραντεβού
+                  ΣΤΕΙΛΕ ΑΙΤΗΜΑ ΡΑΝΤΕΒΟΥ
                 </button>
               </form>
             )}
           </div>
 
           <div className="space-y-6">
-            <div className="overflow-hidden rounded-3xl shadow-elegant">
+            <div className="overflow-hidden border border-border">
               <img
                 src={salonInterior}
-                alt="Εσωτερικό του salon Pour Moi Nails"
+                alt="Εσωτερικό του Coiffure Aspa & Vangel"
                 loading="lazy"
                 width={1536}
-                height={1024}
+                height={864}
                 className="w-full h-72 object-cover"
               />
             </div>
 
-            <div className="bg-cream rounded-3xl p-8 space-y-5">
-              <h3 className="font-display text-3xl">Επισκέψου μας</h3>
+            <div className="bg-onyx text-ivory p-8 space-y-5">
+              <h3 className="font-display text-3xl text-ivory">Επισκέψου μας</h3>
+              <div className="h-px w-12 bg-gold" />
 
               <div className="flex items-start gap-4">
-                <MapPin className="h-5 w-5 text-rose-gold-deep mt-1 shrink-0" />
+                <MapPin className="h-4 w-4 text-gold mt-1 shrink-0" />
                 <div>
-                  <div className="font-medium">Διεύθυνση</div>
-                  <div className="text-muted-foreground text-sm">Ερμού 42, Σύνταγμα, Αθήνα 10563</div>
+                  <div className="text-[10px] tracking-luxury uppercase text-ivory/60">Διεύθυνση</div>
+                  <div className="text-sm mt-1">Σκουφά 38, Κολωνάκι, Αθήνα 10673</div>
                 </div>
               </div>
 
               <div className="flex items-start gap-4">
-                <Phone className="h-5 w-5 text-rose-gold-deep mt-1 shrink-0" />
+                <Phone className="h-4 w-4 text-gold mt-1 shrink-0" />
                 <div>
-                  <div className="font-medium">Τηλέφωνο</div>
-                  <a href="tel:+302103456789" className="text-muted-foreground text-sm hover:text-rose-gold-deep">
-                    +30 210 345 6789
-                  </a>
+                  <div className="text-[10px] tracking-luxury uppercase text-ivory/60">Τηλέφωνο</div>
+                  <a href="tel:+302103612345" className="text-sm hover:text-gold transition">+30 210 361 2345</a>
                 </div>
               </div>
 
               <div className="flex items-start gap-4">
-                <Mail className="h-5 w-5 text-rose-gold-deep mt-1 shrink-0" />
+                <Mail className="h-4 w-4 text-gold mt-1 shrink-0" />
                 <div>
-                  <div className="font-medium">Email</div>
-                  <a href="mailto:hello@pourmoinails.gr" className="text-muted-foreground text-sm hover:text-rose-gold-deep">
-                    hello@pourmoinails.gr
-                  </a>
+                  <div className="text-[10px] tracking-luxury uppercase text-ivory/60">Email</div>
+                  <a href="mailto:info@aspavangel.gr" className="text-sm hover:text-gold transition">info@aspavangel.gr</a>
                 </div>
               </div>
 
               <div className="flex items-start gap-4">
-                <Clock className="h-5 w-5 text-rose-gold-deep mt-1 shrink-0" />
-                <div>
-                  <div className="font-medium">Ωράριο</div>
-                  <div className="text-muted-foreground text-sm">
-                    Δευτ–Παρ: 09:00 – 21:00<br />
-                    Σάββατο: 09:00 – 18:00<br />
-                    Κυριακή: Κλειστά
-                  </div>
+                <Clock className="h-4 w-4 text-gold mt-1 shrink-0" />
+                <div className="w-full">
+                  <div className="text-[10px] tracking-luxury uppercase text-ivory/60 mb-2">Ωράριο Λειτουργίας</div>
+                  <ul className="text-sm space-y-1">
+                    {hours.map(([day, time]) => (
+                      <li key={day} className="flex justify-between gap-6 border-b border-ivory/10 pb-1">
+                        <span className="text-ivory/80">{day}</span>
+                        <span className={time === "Κλειστά" ? "text-ivory/50" : "text-gold"}>{time}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             </div>
 
-            <div className="overflow-hidden rounded-3xl shadow-soft border border-border">
+            <div className="overflow-hidden border border-border">
               <iframe
-                title="Χάρτης - Pour Moi Nails"
-                src="https://www.google.com/maps?q=Ermou+42+Athens&output=embed"
+                title="Χάρτης — Coiffure Aspa & Vangel"
+                src="https://www.google.com/maps?q=Skoufa+38+Kolonaki+Athens&output=embed"
                 width="100%"
                 height="280"
                 style={{ border: 0 }}
@@ -460,34 +510,92 @@ function Home() {
             </div>
           </div>
         </div>
+
+        {/* CONTACT FORM */}
+        <div className="mx-auto max-w-3xl px-6 mt-24 pt-20 border-t border-border">
+          <div className="text-center mb-10">
+            <span className="font-script text-2xl text-gold-deep">Επικοινωνία</span>
+            <h2 className="font-display text-4xl md:text-5xl mt-2">Στείλε μας μήνυμα</h2>
+            <div className="mx-auto mt-6 h-px w-16 bg-gold" />
+          </div>
+
+          {contactSent ? (
+            <div className="border border-gold/40 bg-gold/5 p-8 text-center">
+              <p className="font-display text-2xl">Το μήνυμά σου παραλήφθηκε</p>
+              <p className="text-muted-foreground mt-2 text-sm">Θα σου απαντήσουμε το συντομότερο.</p>
+            </div>
+          ) : (
+            <form
+              onSubmit={(e) => {
+                e.preventDefault();
+                setContactSent(true);
+              }}
+              className="grid gap-5 md:grid-cols-2"
+            >
+              <input
+                required
+                value={contact.name}
+                onChange={(e) => setContact({ ...contact, name: e.target.value })}
+                placeholder="Όνομα"
+                className="border border-input bg-card px-4 py-3 focus:outline-none focus:border-gold transition"
+              />
+              <input
+                required
+                type="email"
+                value={contact.email}
+                onChange={(e) => setContact({ ...contact, email: e.target.value })}
+                placeholder="Email"
+                className="border border-input bg-card px-4 py-3 focus:outline-none focus:border-gold transition"
+              />
+              <textarea
+                required
+                rows={5}
+                value={contact.message}
+                onChange={(e) => setContact({ ...contact, message: e.target.value })}
+                placeholder="Το μήνυμά σου"
+                className="md:col-span-2 border border-input bg-card px-4 py-3 focus:outline-none focus:border-gold transition resize-none"
+              />
+              <button
+                type="submit"
+                className="md:col-span-2 bg-onyx px-8 py-4 text-ivory text-sm tracking-luxury hover:bg-gold hover:text-onyx transition"
+              >
+                ΑΠΟΣΤΟΛΗ ΜΗΝΥΜΑΤΟΣ
+              </button>
+            </form>
+          )}
+        </div>
       </section>
 
       {/* FOOTER */}
-      <footer className="bg-foreground text-background py-14">
-        <div className="mx-auto max-w-7xl px-6 grid gap-10 md:grid-cols-3 items-start">
+      <footer className="bg-onyx text-ivory pt-16 pb-8 border-t border-gold/20">
+        <div className="mx-auto max-w-7xl px-6 grid gap-12 md:grid-cols-3 items-start">
           <div>
-            <div className="font-script text-3xl text-rose-gold-light">Pour Moi</div>
-            <div className="font-display text-xl tracking-[0.3em]">NAILS</div>
-            <p className="mt-4 text-sm text-background/70 max-w-xs">
-              Premium nail salon στην καρδιά της Αθήνας. Από το 2014 δίπλα στην κάθε γυναίκα.
+            <div className="font-script text-3xl text-gold">Coiffure</div>
+            <div className="font-display text-lg tracking-luxury">ASPA & VANGEL</div>
+            <p className="mt-5 text-sm text-ivory/60 max-w-xs font-light leading-relaxed">
+              Κομμωτήριο πολυτελείας στο Κολωνάκι. Από το 2003 δίπλα σου, για την ομορφιά που σου αξίζει.
             </p>
           </div>
-          <div className="text-sm space-y-2 text-background/80">
-            <div>Ερμού 42, Σύνταγμα 10563</div>
-            <div>+30 210 345 6789</div>
-            <div>hello@pourmoinails.gr</div>
+          <div className="text-sm space-y-2 text-ivory/75">
+            <div className="text-[10px] tracking-luxury uppercase text-gold mb-3">Επικοινωνία</div>
+            <div>Σκουφά 38, Κολωνάκι 10673</div>
+            <a href="tel:+302103612345" className="block hover:text-gold transition">+30 210 361 2345</a>
+            <a href="mailto:info@aspavangel.gr" className="block hover:text-gold transition">info@aspavangel.gr</a>
           </div>
-          <div className="flex md:justify-end gap-4">
-            <a href="#" aria-label="Instagram" className="h-11 w-11 rounded-full border border-background/30 flex items-center justify-center hover:bg-rose-gold hover:border-rose-gold transition">
-              <Instagram className="h-5 w-5" />
-            </a>
-            <a href="#" aria-label="Facebook" className="h-11 w-11 rounded-full border border-background/30 flex items-center justify-center hover:bg-rose-gold hover:border-rose-gold transition">
-              <Facebook className="h-5 w-5" />
-            </a>
+          <div className="md:text-right">
+            <div className="text-[10px] tracking-luxury uppercase text-gold mb-3">Ακολούθησέ μας</div>
+            <div className="flex md:justify-end gap-3">
+              <a href="#" aria-label="Instagram" className="h-11 w-11 border border-gold/40 flex items-center justify-center hover:bg-gold hover:text-onyx transition">
+                <Instagram className="h-4 w-4" />
+              </a>
+              <a href="#" aria-label="Facebook" className="h-11 w-11 border border-gold/40 flex items-center justify-center hover:bg-gold hover:text-onyx transition">
+                <Facebook className="h-4 w-4" />
+              </a>
+            </div>
           </div>
         </div>
-        <div className="mx-auto max-w-7xl px-6 mt-10 pt-6 border-t border-background/15 text-xs text-background/50 text-center">
-          © {new Date().getFullYear()} Pour Moi Nails. Με αγάπη και στυλ.
+        <div className="mx-auto max-w-7xl px-6 mt-12 pt-6 border-t border-ivory/10 text-[10px] text-ivory/40 text-center tracking-luxury uppercase">
+          © {new Date().getFullYear()} Coiffure Aspa & Vangel · Crafted with Devotion
         </div>
       </footer>
     </div>
