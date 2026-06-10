@@ -77,9 +77,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Νύχια Αθήνα — Premium Nail Salon στην Αθήνα" },
-      { name: "description", content: "Νύχια Αθήνα: manicure, pedicure, gel nails και nail art από έμπειρες nail artists στην καρδιά της Αθήνας. Κλείσε online ραντεβού." },
-      { property: "og:title", content: "Νύχια Αθήνα — Premium Nail Salon" },
+      { title: "Pour Moi Nails — Premium Nail Salon στην Αθήνα" },
+      { name: "description", content: "Pour Moi Nails: manicure, pedicure, gel nails και nail art από έμπειρες nail artists στην καρδιά της Αθήνας. Κλείσε online ραντεβού." },
+      { property: "og:title", content: "Pour Moi Nails — Premium Nail Salon Athens" },
       { property: "og:description", content: "Τέλεια νύχια κάθε φορά, στο πιο κομψό nail salon της Αθήνας." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -99,7 +99,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="el">
       <head>
         <HeadContent />
       </head>

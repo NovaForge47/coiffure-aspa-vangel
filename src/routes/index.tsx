@@ -98,8 +98,8 @@ function Home() {
       <header className="fixed top-0 z-50 w-full backdrop-blur-md bg-background/70 border-b border-border/50">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
           <a href="#top" className="flex flex-col leading-none">
-            <span className="font-script text-2xl text-rose-gold-deep">Νύχια</span>
-            <span className="font-display text-lg tracking-[0.3em] text-foreground -mt-1">ΑΘΗΝΑ</span>
+            <span className="font-script text-2xl text-rose-gold-deep">Pour Moi</span>
+            <span className="font-display text-lg tracking-[0.3em] text-foreground -mt-1">NAILS</span>
           </a>
           <nav className="hidden md:flex items-center gap-8 text-sm tracking-wider uppercase">
             <a href="#services" className="hover:text-rose-gold-deep transition">Υπηρεσίες</a>
@@ -132,8 +132,8 @@ function Home() {
               Τέλεια Νύχια <em className="italic text-gradient-rose">Κάθε</em> Φορά
             </h1>
             <p className="mt-8 max-w-xl text-lg text-muted-foreground leading-relaxed">
-              Στο Νύχια Αθήνα, κάθε ραντεβού είναι μια στιγμή φροντίδας μόνο για σένα. Έμπειρες nail
-              artists, premium προϊόντα και αυστηρά πρωτόκολλα υγιεινής.
+              Στο Pour Moi Nails, κάθε ραντεβού είναι μια στιγμή φροντίδας μόνο για σένα. Έμπειρες nail
+              artists, premium προϊόντα και αυστηρά πρωτόκολλα υγιεινής στην καρδιά της Αθήνας.
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-4">
               <a
@@ -170,7 +170,7 @@ function Home() {
             <div className="relative overflow-hidden rounded-[2rem] shadow-elegant">
               <img
                 src={heroImg}
-                alt="Τέλεια νύχια σε ροζ απόχρωση στο Νύχια Αθήνα"
+                alt="Pour Moi Nails — premium nail polish editorial"
                 className="h-[600px] w-full object-cover"
                 width={1080}
                 height={1440}
@@ -395,7 +395,7 @@ function Home() {
             <div className="overflow-hidden rounded-3xl shadow-elegant">
               <img
                 src={salonInterior}
-                alt="Εσωτερικό του nail salon Νύχια Αθήνα"
+                alt="Εσωτερικό του salon Pour Moi Nails"
                 loading="lazy"
                 width={1536}
                 height={1024}
@@ -428,8 +428,8 @@ function Home() {
                 <Mail className="h-5 w-5 text-rose-gold-deep mt-1 shrink-0" />
                 <div>
                   <div className="font-medium">Email</div>
-                  <a href="mailto:hello@nyxia-athina.gr" className="text-muted-foreground text-sm hover:text-rose-gold-deep">
-                    hello@nyxia-athina.gr
+                  <a href="mailto:hello@pourmoinails.gr" className="text-muted-foreground text-sm hover:text-rose-gold-deep">
+                    hello@pourmoinails.gr
                   </a>
                 </div>
               </div>
@@ -449,7 +449,7 @@ function Home() {
 
             <div className="overflow-hidden rounded-3xl shadow-soft border border-border">
               <iframe
-                title="Χάρτης - Νύχια Αθήνα"
+                title="Χάρτης - Pour Moi Nails"
                 src="https://www.google.com/maps?q=Ermou+42+Athens&output=embed"
                 width="100%"
                 height="280"
@@ -466,8 +466,8 @@ function Home() {
       <footer className="bg-foreground text-background py-14">
         <div className="mx-auto max-w-7xl px-6 grid gap-10 md:grid-cols-3 items-start">
           <div>
-            <div className="font-script text-3xl text-rose-gold-light">Νύχια</div>
-            <div className="font-display text-xl tracking-[0.3em]">ΑΘΗΝΑ</div>
+            <div className="font-script text-3xl text-rose-gold-light">Pour Moi</div>
+            <div className="font-display text-xl tracking-[0.3em]">NAILS</div>
             <p className="mt-4 text-sm text-background/70 max-w-xs">
               Premium nail salon στην καρδιά της Αθήνας. Από το 2014 δίπλα στην κάθε γυναίκα.
             </p>
@@ -475,7 +475,7 @@ function Home() {
           <div className="text-sm space-y-2 text-background/80">
             <div>Ερμού 42, Σύνταγμα 10563</div>
             <div>+30 210 345 6789</div>
-            <div>hello@nyxia-athina.gr</div>
+            <div>hello@pourmoinails.gr</div>
           </div>
           <div className="flex md:justify-end gap-4">
             <a href="#" aria-label="Instagram" className="h-11 w-11 rounded-full border border-background/30 flex items-center justify-center hover:bg-rose-gold hover:border-rose-gold transition">
@@ -487,7 +487,7 @@ function Home() {
           </div>
         </div>
         <div className="mx-auto max-w-7xl px-6 mt-10 pt-6 border-t border-background/15 text-xs text-background/50 text-center">
-          © {new Date().getFullYear()} Νύχια Αθήνα. Με αγάπη και στυλ.
+          © {new Date().getFullYear()} Pour Moi Nails. Με αγάπη και στυλ.
         </div>
       </footer>
     </div>
