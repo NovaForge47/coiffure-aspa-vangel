@@ -30,58 +30,61 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
-  --color-rose-gold: var(--rose-gold);
-  --color-rose-gold-light: var(--rose-gold-light);
-  --color-rose-gold-deep: var(--rose-gold-deep);
-  --color-cream: var(--cream);
-  --color-blush: var(--blush);
+  --color-gold: var(--gold);
+  --color-gold-light: var(--gold-light);
+  --color-gold-deep: var(--gold-deep);
+  --color-onyx: var(--onyx);
+  --color-ivory: var(--ivory);
 
   --font-display: "Cormorant Garamond", serif;
-  --font-body: "Karla", sans-serif;
+  --font-body: "Jost", sans-serif;
   --font-script: "Pinyon Script", cursive;
 }
 
 :root {
-  --radius: 0.5rem;
+  --radius: 0.25rem;
 
-  /* Pink + white palette (Νύχια Αθήνα) */
-  --background: oklch(0.992 0.004 350);          /* pearl white */
-  --foreground: oklch(0.24 0.04 350);             /* deep plum */
+  /* Gold + black palette (Coiffure Aspa & Vangel) */
+  --background: oklch(0.99 0.004 80);             /* warm ivory */
+  --foreground: oklch(0.16 0.01 80);               /* near-black */
 
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.24 0.04 350);
+  --card-foreground: oklch(0.16 0.01 80);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.24 0.04 350);
+  --popover-foreground: oklch(0.16 0.01 80);
 
-  --primary: oklch(0.68 0.18 355);               /* vivid pink */
-  --primary-foreground: oklch(0.995 0.003 350);
+  --primary: oklch(0.72 0.13 80);                  /* gold */
+  --primary-foreground: oklch(0.12 0.005 80);
 
-  --secondary: oklch(0.96 0.025 350);
-  --secondary-foreground: oklch(0.32 0.05 350);
+  --secondary: oklch(0.95 0.012 80);
+  --secondary-foreground: oklch(0.22 0.02 80);
 
-  --muted: oklch(0.97 0.014 350);
-  --muted-foreground: oklch(0.5 0.04 350);
+  --muted: oklch(0.96 0.008 80);
+  --muted-foreground: oklch(0.48 0.02 80);
 
-  --accent: oklch(0.92 0.05 355);
-  --accent-foreground: oklch(0.3 0.06 350);
+  --accent: oklch(0.92 0.04 85);
+  --accent-foreground: oklch(0.22 0.02 80);
 
   --destructive: oklch(0.55 0.2 25);
   --destructive-foreground: oklch(0.99 0 0);
 
-  --border: oklch(0.92 0.02 350);
-  --input: oklch(0.94 0.018 350);
-  --ring: oklch(0.68 0.18 355);
+  --border: oklch(0.9 0.015 80);
+  --input: oklch(0.93 0.015 80);
+  --ring: oklch(0.72 0.13 80);
 
-  --rose-gold: oklch(0.72 0.14 355);             /* pink */
-  --rose-gold-light: oklch(0.92 0.05 350);       /* blush */
-  --rose-gold-deep: oklch(0.52 0.18 355);        /* deep pink */
-  --cream: oklch(0.98 0.012 350);                /* soft pink-white */
-  --blush: oklch(0.93 0.04 355);
+  --gold: oklch(0.78 0.13 82);                     /* champagne gold */
+  --gold-light: oklch(0.9 0.07 85);                /* pale gold */
+  --gold-deep: oklch(0.58 0.13 70);                /* antique gold */
+  --onyx: oklch(0.14 0.005 80);                    /* deep black */
+  --ivory: oklch(0.97 0.008 80);
 
-  --gradient-rose: linear-gradient(135deg, oklch(0.82 0.12 350), oklch(0.58 0.2 355));
-  --gradient-soft: linear-gradient(180deg, oklch(0.995 0.004 350) 0%, oklch(0.93 0.05 355) 100%);
-  --shadow-elegant: 0 30px 60px -20px oklch(0.55 0.18 355 / 0.28);
-  --shadow-soft: 0 10px 40px -10px oklch(0.55 0.18 355 / 0.18);
+  --gradient-gold: linear-gradient(135deg, oklch(0.88 0.1 85) 0%, oklch(0.62 0.14 70) 100%);
+  --gradient-onyx: linear-gradient(180deg, oklch(0.18 0.005 80) 0%, oklch(0.1 0.005 80) 100%);
+  --gradient-soft: linear-gradient(180deg, var(--ivory) 0%, oklch(0.93 0.04 85) 100%);
+
+  --shadow-elegant: 0 30px 60px -20px oklch(0.12 0.01 80 / 0.45);
+  --shadow-soft: 0 10px 40px -15px oklch(0.12 0.01 80 / 0.25);
+  --shadow-gold: 0 20px 50px -20px oklch(0.62 0.14 70 / 0.45);
 }
 
 @layer base {
@@ -108,15 +111,19 @@
   }
 }
 
-@utility text-gradient-rose {
-  background: var(--gradient-rose);
+@utility text-gradient-gold {
+  background: var(--gradient-gold);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
-@utility bg-gradient-rose {
-  background: var(--gradient-rose);
+@utility bg-gradient-gold {
+  background: var(--gradient-gold);
+}
+
+@utility bg-gradient-onyx {
+  background: var(--gradient-onyx);
 }
 
 @utility bg-gradient-soft {
@@ -131,7 +138,15 @@
   box-shadow: var(--shadow-soft);
 }
 
+@utility shadow-gold {
+  box-shadow: var(--shadow-gold);
+}
+
 @utility font-script {
   font-family: var(--font-script);
   font-weight: 400;
+}
+
+@utility tracking-luxury {
+  letter-spacing: 0.32em;
 }
