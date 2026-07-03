@@ -114,8 +114,6 @@ const hours = [
 ];
 
 function Home() {
-  const [form, setForm] = useState({ name: "", phone: "", service: "", date: "", message: "" });
-  const [sent, setSent] = useState(false);
   const [contact, setContact] = useState({ name: "", email: "", message: "" });
   const [contactSent, setContactSent] = useState(false);
 
@@ -354,91 +352,30 @@ function Home() {
             <h2 className="font-display text-5xl md:text-6xl mt-2">Κλείσε το ραντεβού σου</h2>
             <div className="mt-6 h-px w-16 bg-gold" />
             <p className="mt-6 text-muted-foreground max-w-md font-light">
-              Συμπλήρωσε τη φόρμα και η ομάδα μας θα επικοινωνήσει μαζί σου μέσα σε λίγες ώρες
-              για να επιβεβαιώσει ημερομηνία και ώρα.
+              Κλείσε ραντεβού online σε χρόνο μηδέν. Διάλεξε υπηρεσία, ημερομηνία και ώρα
+              απευθείας από το ημερολόγιό μας — επιβεβαίωση άμεσα.
             </p>
 
-            {sent ? (
-              <div className="mt-10 border border-gold/40 bg-gold/5 p-8 text-center">
-                <Sparkles className="mx-auto h-8 w-8 text-gold-deep" />
-                <p className="mt-3 font-display text-2xl">Ευχαριστούμε!</p>
-                <p className="text-muted-foreground mt-2 text-sm">Θα σε καλέσουμε πολύ σύντομα.</p>
-              </div>
-            ) : (
-              <form
-                onSubmit={(e) => {
-                  e.preventDefault();
-                  setSent(true);
-                }}
-                className="mt-10 space-y-5"
-              >
-                <div className="grid grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-[10px] uppercase tracking-luxury text-muted-foreground mb-2">Όνομα</label>
-                    <input
-                      required
-                      value={form.name}
-                      onChange={(e) => setForm({ ...form, name: e.target.value })}
-                      className="w-full border border-input bg-card px-4 py-3 focus:outline-none focus:border-gold transition"
-                      placeholder="Το όνομά σου"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-[10px] uppercase tracking-luxury text-muted-foreground mb-2">Τηλέφωνο</label>
-                    <input
-                      required
-                      type="tel"
-                      value={form.phone}
-                      onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                      className="w-full border border-input bg-card px-4 py-3 focus:outline-none focus:border-gold transition"
-                      placeholder="69XXXXXXXX"
-                    />
-                  </div>
-                </div>
-                <div className="grid grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-[10px] uppercase tracking-luxury text-muted-foreground mb-2">Υπηρεσία</label>
-                    <select
-                      required
-                      value={form.service}
-                      onChange={(e) => setForm({ ...form, service: e.target.value })}
-                      className="w-full border border-input bg-card px-4 py-3 focus:outline-none focus:border-gold transition"
-                    >
-                      <option value="">Διάλεξε</option>
-                      {services.map((s) => (
-                        <option key={s.title}>{s.title}</option>
-                      ))}
-                    </select>
-                  </div>
-                  <div>
-                    <label className="block text-[10px] uppercase tracking-luxury text-muted-foreground mb-2">Ημερομηνία</label>
-                    <input
-                      required
-                      type="date"
-                      value={form.date}
-                      onChange={(e) => setForm({ ...form, date: e.target.value })}
-                      className="w-full border border-input bg-card px-4 py-3 focus:outline-none focus:border-gold transition"
-                    />
-                  </div>
-                </div>
-                <div>
-                  <label className="block text-[10px] uppercase tracking-luxury text-muted-foreground mb-2">Σημειώσεις</label>
-                  <textarea
-                    rows={3}
-                    value={form.message}
-                    onChange={(e) => setForm({ ...form, message: e.target.value })}
-                    className="w-full border border-input bg-card px-4 py-3 focus:outline-none focus:border-gold transition resize-none"
-                    placeholder="π.χ. balayage + κούρεμα, προτιμώ απογευματινή ώρα"
-                  />
-                </div>
-                <button
-                  type="submit"
-                  className="w-full bg-onyx px-8 py-4 text-ivory text-sm tracking-luxury hover:bg-gold hover:text-onyx transition"
-                >
-                  ΣΤΕΙΛΕ ΑΙΤΗΜΑ ΡΑΝΤΕΒΟΥ
-                </button>
-              </form>
-            )}
+            <div className="mt-8 border border-gold/30 bg-card overflow-hidden">
+              <iframe
+                src="https://nexusnkz9.setmore.com"
+                title="Online Κράτηση — Coiffure Aspa & Vangel"
+                className="w-full"
+                style={{ border: 0, height: 720 }}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
+
+            <a
+              href="https://nexusnkz9.setmore.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-flex items-center gap-2 text-sm tracking-luxury text-gold-deep hover:text-gold transition"
+            >
+              <Calendar className="h-4 w-4" />
+              Άνοιγμα κράτησης σε νέο παράθυρο
+            </a>
           </div>
 
           <div className="space-y-6">
