@@ -15,7 +15,13 @@ import {
   Instagram,
   Facebook,
   Calendar,
+  Droplets,
 } from "lucide-react";
+
+import koreanSpa1 from "@/assets/korean-spa-1.jpg.asset.json";
+import koreanSpa2 from "@/assets/korean-spa-2.jpg.asset.json";
+import koreanSpa3 from "@/assets/korean-spa-3.jpg.asset.json";
+import koreanSpa4 from "@/assets/korean-spa-4.jpg.asset.json";
 
 import heroImg from "@/assets/hero-hair.jpg";
 import coloringImg from "@/assets/service-coloring.jpg";
