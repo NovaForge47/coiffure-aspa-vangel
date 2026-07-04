@@ -583,13 +583,13 @@ function Home() {
             <div className="font-script text-3xl text-gold">Coiffure</div>
             <div className="font-display text-lg tracking-luxury">ASPA & VANGEL</div>
             <p className="mt-5 text-sm text-ivory/60 max-w-xs font-light leading-relaxed">
-              Κομμωτήριο πολυτελείας στο Κολωνάκι. Από το 2003 δίπλα σου, για την ομορφιά που σου αξίζει.
+              Κομμωτήριο στο Μαρκόπουλο Μεσογαίας. Από το 2003 δίπλα σου, για την ομορφιά που σου αξίζει.
             </p>
           </div>
           <div className="text-sm space-y-2 text-ivory/75">
             <div className="text-[10px] tracking-luxury uppercase text-gold mb-3">Επικοινωνία</div>
-            <div>Σκουφά 38, Κολωνάκι 10673</div>
-            <a href="tel:+302103612345" className="block hover:text-gold transition">+30 210 361 2345</a>
+            <div>Λεωφ. Πόρτο Ράφτη 17, Μαρκόπουλο 190 03</div>
+            <a href="tel:+302299024337" className="block hover:text-gold transition">+30 22990 24337</a>
             <a href="mailto:info@aspavangel.gr" className="block hover:text-gold transition">info@aspavangel.gr</a>
           </div>
           <div className="md:text-right">
