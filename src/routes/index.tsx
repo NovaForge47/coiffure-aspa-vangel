@@ -139,6 +139,7 @@ function Home() {
           </a>
           <nav className="hidden md:flex items-center gap-8 text-xs tracking-luxury uppercase text-ivory/85">
             <a href="#services" className="hover:text-gold transition">Υπηρεσίες</a>
+            <a href="#korean-spa" className="hover:text-gold transition">Korean Spa</a>
             <a href="#gallery" className="hover:text-gold transition">Gallery</a>
             <a href="#testimonials" className="hover:text-gold transition">Κριτικές</a>
             <a href="#contact" className="hover:text-gold transition">Επικοινωνία</a>
