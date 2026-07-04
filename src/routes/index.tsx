@@ -279,6 +279,67 @@ function Home() {
         </div>
       </section>
 
+      {/* KOREAN SPA */}
+      <section id="korean-spa" className="py-32 bg-gradient-onyx text-ivory">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="grid lg:grid-cols-[1fr_1.2fr] gap-16 items-center">
+            <div>
+              <div className="flex items-center gap-3 mb-6">
+                <Droplets className="h-5 w-5 text-gold" />
+                <span className="font-script text-2xl text-gold">Signature Ritual</span>
+              </div>
+              <h2 className="font-display text-5xl md:text-6xl text-ivory leading-[1.05]">
+                Korean <em className="italic text-gradient-gold">Spa</em>
+              </h2>
+              <div className="mt-6 h-px w-16 bg-gold" />
+              <p className="mt-6 text-ivory/75 font-light leading-relaxed">
+                Μια πολυαισθητηριακή εμπειρία εμπνευσμένη από τη Νότια Κορέα: θεραπεία τριχωτής κεφαλής
+                με ζεστό νερό, χρωματοθεραπεία, βότανα και μασάζ που χαλαρώνει βαθιά και αναζωογονεί
+                τα μαλλιά από τη ρίζα.
+              </p>
+              <ul className="mt-8 space-y-3 text-sm text-ivory/80">
+                {[
+                  "Βαθύς καθαρισμός & απολέπιση τριχωτού",
+                  "Θεραπεία με βότανα και αιθέρια έλαια",
+                  "Χρωματοθεραπεία & μασάζ κεφαλής",
+                  "Ενυδάτωση και λάμψη μαλλιών",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-3 border-b border-gold/15 pb-2">
+                    <span className="text-gold mt-1">✦</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <a
+                href="#booking"
+                className="mt-10 inline-flex items-center gap-3 bg-gold px-9 py-4 text-sm tracking-luxury text-onyx shadow-gold hover:bg-gold-light transition"
+              >
+                Κλείσε το Korean Spa
+                <Calendar className="h-4 w-4" />
+              </a>
+            </div>
+
+            <div className="grid grid-cols-2 gap-3">
+              {koreanSpaImages.map((img, i) => (
+                <div
+                  key={i}
+                  className={`relative overflow-hidden border border-gold/20 ${
+                    i === 0 ? "row-span-2 h-full" : ""
+                  }`}
+                >
+                  <img
+                    src={img.url}
+                    alt={`Korean Spa θεραπεία ${i + 1}`}
+                    loading="lazy"
+                    className="h-full w-full object-cover hover:scale-105 transition duration-700"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* GALLERY */}
       <section id="gallery" className="py-32 bg-background">
         <div className="mx-auto max-w-7xl px-6">
