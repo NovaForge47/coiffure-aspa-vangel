@@ -471,7 +471,7 @@ function Home() {
                 <MapPin className="h-4 w-4 text-gold mt-1 shrink-0" />
                 <div>
                   <div className="text-[10px] tracking-luxury uppercase text-ivory/60">Διεύθυνση</div>
-                  <div className="text-sm mt-1">Σκουφά 38, Κολωνάκι, Αθήνα 10673</div>
+                  <div className="text-sm mt-1">Λεωφ. Πόρτο Ράφτη 17, Μαρκόπουλο Μεσογαίας 190 03</div>
                 </div>
               </div>
 
