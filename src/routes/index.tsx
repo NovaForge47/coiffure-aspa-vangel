@@ -479,7 +479,7 @@ function Home() {
                 <Phone className="h-4 w-4 text-gold mt-1 shrink-0" />
                 <div>
                   <div className="text-[10px] tracking-luxury uppercase text-ivory/60">Τηλέφωνο</div>
-                  <a href="tel:+302103612345" className="text-sm hover:text-gold transition">+30 210 361 2345</a>
+                  <a href="tel:+302299024337" className="block text-sm hover:text-gold transition">+30 22990 24337</a>
                 </div>
               </div>
 
