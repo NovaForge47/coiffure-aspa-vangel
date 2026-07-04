@@ -15,7 +15,13 @@ import {
   Instagram,
   Facebook,
   Calendar,
+  Droplets,
 } from "lucide-react";
+
+import koreanSpa1 from "@/assets/korean-spa-1.jpg.asset.json";
+import koreanSpa2 from "@/assets/korean-spa-2.jpg.asset.json";
+import koreanSpa3 from "@/assets/korean-spa-3.jpg.asset.json";
+import koreanSpa4 from "@/assets/korean-spa-4.jpg.asset.json";
 
 import heroImg from "@/assets/hero-hair.jpg";
 import coloringImg from "@/assets/service-coloring.jpg";
@@ -108,10 +114,15 @@ const gallery = [
 
 const hours = [
   ["Δευτέρα", "Κλειστά"],
-  ["Τρίτη – Παρασκευή", "09:00 – 21:00"],
-  ["Σάββατο", "09:00 – 18:00"],
+  ["Τρίτη", "08:30 – 13:30, 17:00 – 20:30"],
+  ["Τετάρτη", "09:00 – 15:00"],
+  ["Πέμπτη", "08:30 – 13:30, 17:00 – 20:30"],
+  ["Παρασκευή", "09:00 – 20:00"],
+  ["Σάββατο", "08:30 – 17:00"],
   ["Κυριακή", "Κλειστά"],
 ];
+
+const koreanSpaImages = [koreanSpa1, koreanSpa2, koreanSpa3, koreanSpa4];
 
 function Home() {
   const [contact, setContact] = useState({ name: "", email: "", message: "" });
@@ -128,6 +139,7 @@ function Home() {
           </a>
           <nav className="hidden md:flex items-center gap-8 text-xs tracking-luxury uppercase text-ivory/85">
             <a href="#services" className="hover:text-gold transition">Υπηρεσίες</a>
+            <a href="#korean-spa" className="hover:text-gold transition">Korean Spa</a>
             <a href="#gallery" className="hover:text-gold transition">Gallery</a>
             <a href="#testimonials" className="hover:text-gold transition">Κριτικές</a>
             <a href="#contact" className="hover:text-gold transition">Επικοινωνία</a>
@@ -267,6 +279,67 @@ function Home() {
         </div>
       </section>
 
+      {/* KOREAN SPA */}
+      <section id="korean-spa" className="py-32 bg-gradient-onyx text-ivory">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="grid lg:grid-cols-[1fr_1.2fr] gap-16 items-center">
+            <div>
+              <div className="flex items-center gap-3 mb-6">
+                <Droplets className="h-5 w-5 text-gold" />
+                <span className="font-script text-2xl text-gold">Signature Ritual</span>
+              </div>
+              <h2 className="font-display text-5xl md:text-6xl text-ivory leading-[1.05]">
+                Korean <em className="italic text-gradient-gold">Spa</em>
+              </h2>
+              <div className="mt-6 h-px w-16 bg-gold" />
+              <p className="mt-6 text-ivory/75 font-light leading-relaxed">
+                Μια πολυαισθητηριακή εμπειρία εμπνευσμένη από τη Νότια Κορέα: θεραπεία τριχωτής κεφαλής
+                με ζεστό νερό, χρωματοθεραπεία, βότανα και μασάζ που χαλαρώνει βαθιά και αναζωογονεί
+                τα μαλλιά από τη ρίζα.
+              </p>
+              <ul className="mt-8 space-y-3 text-sm text-ivory/80">
+                {[
+                  "Βαθύς καθαρισμός & απολέπιση τριχωτού",
+                  "Θεραπεία με βότανα και αιθέρια έλαια",
+                  "Χρωματοθεραπεία & μασάζ κεφαλής",
+                  "Ενυδάτωση και λάμψη μαλλιών",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-3 border-b border-gold/15 pb-2">
+                    <span className="text-gold mt-1">✦</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <a
+                href="#booking"
+                className="mt-10 inline-flex items-center gap-3 bg-gold px-9 py-4 text-sm tracking-luxury text-onyx shadow-gold hover:bg-gold-light transition"
+              >
+                Κλείσε το Korean Spa
+                <Calendar className="h-4 w-4" />
+              </a>
+            </div>
+
+            <div className="grid grid-cols-2 gap-3">
+              {koreanSpaImages.map((img, i) => (
+                <div
+                  key={i}
+                  className={`relative overflow-hidden border border-gold/20 ${
+                    i === 0 ? "row-span-2 h-full" : ""
+                  }`}
+                >
+                  <img
+                    src={img.url}
+                    alt={`Korean Spa θεραπεία ${i + 1}`}
+                    loading="lazy"
+                    className="h-full w-full object-cover hover:scale-105 transition duration-700"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* GALLERY */}
       <section id="gallery" className="py-32 bg-background">
         <div className="mx-auto max-w-7xl px-6">
@@ -398,7 +471,7 @@ function Home() {
                 <MapPin className="h-4 w-4 text-gold mt-1 shrink-0" />
                 <div>
                   <div className="text-[10px] tracking-luxury uppercase text-ivory/60">Διεύθυνση</div>
-                  <div className="text-sm mt-1">Σκουφά 38, Κολωνάκι, Αθήνα 10673</div>
+                  <div className="text-sm mt-1">Λεωφ. Πόρτο Ράφτη 17, Μαρκόπουλο Μεσογαίας 190 03</div>
                 </div>
               </div>
 
@@ -406,7 +479,7 @@ function Home() {
                 <Phone className="h-4 w-4 text-gold mt-1 shrink-0" />
                 <div>
                   <div className="text-[10px] tracking-luxury uppercase text-ivory/60">Τηλέφωνο</div>
-                  <a href="tel:+302103612345" className="text-sm hover:text-gold transition">+30 210 361 2345</a>
+                  <a href="tel:+302299024337" className="block text-sm hover:text-gold transition">+30 22990 24337</a>
                 </div>
               </div>
 
@@ -437,7 +510,7 @@ function Home() {
             <div className="overflow-hidden border border-border">
               <iframe
                 title="Χάρτης — Coiffure Aspa & Vangel"
-                src="https://www.google.com/maps?q=Skoufa+38+Kolonaki+Athens&output=embed"
+                src="https://www.google.com/maps?q=Leof.+Porto+Rafti+17,+Markopoulo+Mesogeas+19003&output=embed"
                 width="100%"
                 height="280"
                 style={{ border: 0 }}
@@ -510,13 +583,13 @@ function Home() {
             <div className="font-script text-3xl text-gold">Coiffure</div>
             <div className="font-display text-lg tracking-luxury">ASPA & VANGEL</div>
             <p className="mt-5 text-sm text-ivory/60 max-w-xs font-light leading-relaxed">
-              Κομμωτήριο πολυτελείας στο Κολωνάκι. Από το 2003 δίπλα σου, για την ομορφιά που σου αξίζει.
+              Κομμωτήριο στο Μαρκόπουλο Μεσογαίας. Από το 2003 δίπλα σου, για την ομορφιά που σου αξίζει.
             </p>
           </div>
           <div className="text-sm space-y-2 text-ivory/75">
             <div className="text-[10px] tracking-luxury uppercase text-gold mb-3">Επικοινωνία</div>
-            <div>Σκουφά 38, Κολωνάκι 10673</div>
-            <a href="tel:+302103612345" className="block hover:text-gold transition">+30 210 361 2345</a>
+            <div>Λεωφ. Πόρτο Ράφτη 17, Μαρκόπουλο 190 03</div>
+            <a href="tel:+302299024337" className="block hover:text-gold transition">+30 22990 24337</a>
             <a href="mailto:info@aspavangel.gr" className="block hover:text-gold transition">info@aspavangel.gr</a>
           </div>
           <div className="md:text-right">
