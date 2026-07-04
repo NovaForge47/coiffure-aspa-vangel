@@ -510,7 +510,7 @@ function Home() {
             <div className="overflow-hidden border border-border">
               <iframe
                 title="Χάρτης — Coiffure Aspa & Vangel"
-                src="https://www.google.com/maps?q=Skoufa+38+Kolonaki+Athens&output=embed"
+                src="https://www.google.com/maps?q=Leof.+Porto+Rafti+17,+Markopoulo+Mesogeas+19003&output=embed"
                 width="100%"
                 height="280"
                 style={{ border: 0 }}
