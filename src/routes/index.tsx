@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState } from "react";
+
 import {
   Scissors,
   Brush,
@@ -10,7 +10,7 @@ import {
   Star,
   MapPin,
   Phone,
-  Mail,
+  
   Clock,
   Instagram,
   Facebook,
@@ -142,8 +142,6 @@ const hours = [
 const koreanSpaImages = [koreanSpa1, koreanSpa2, koreanSpa3, koreanSpa4];
 
 function Home() {
-  const [contact, setContact] = useState({ name: "", email: "", message: "" });
-  const [contactSent, setContactSent] = useState(false);
 
   return (
     <div className="min-h-screen bg-background text-foreground">
