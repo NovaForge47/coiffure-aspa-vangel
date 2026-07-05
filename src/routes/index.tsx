@@ -498,7 +498,6 @@ function Home() {
                   </div>
                   <div>
                     <div className="font-medium text-ivory text-sm">{t.name}</div>
-                    <div className="text-xs text-ivory/55 tracking-wider mt-0.5">{t.role}</div>
                   </div>
                 </div>
               </div>
@@ -515,43 +514,19 @@ function Home() {
             <h2 className="font-display text-5xl md:text-6xl mt-2">Κλείσε το ραντεβού σου</h2>
             <div className="mt-6 h-px w-16 bg-gold" />
             <p className="mt-6 text-muted-foreground max-w-md font-light">
-              Κλείσε ραντεβού online σε χρόνο μηδέν. Διάλεξε υπηρεσία, ημερομηνία και ώρα
-              απευθείας από το ημερολόγιό μας — επιβεβαίωση άμεσα.
+              Κλείσε ραντεβού τηλεφωνικά ή περνώντας από το κατάστημα — θα χαρούμε να σε εξυπηρετήσουμε.
             </p>
-
-            <div className="mt-8 border border-gold/30 bg-card overflow-hidden">
-              <iframe
-                src="https://nexusnkz9.setmore.com"
-                title="Online Κράτηση — Coiffure Aspa & Vangel"
-                className="w-full"
-                style={{ border: 0, height: 720 }}
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
-            </div>
-
             <a
-              href="https://nexusnkz9.setmore.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-4 inline-flex items-center gap-2 text-sm tracking-luxury text-gold-deep hover:text-gold transition"
+              href="tel:+302299024337"
+              className="mt-8 inline-flex items-center gap-3 bg-gold px-9 py-4 text-sm tracking-luxury text-onyx shadow-gold hover:bg-gold-light transition"
             >
-              <Calendar className="h-4 w-4" />
-              Άνοιγμα κράτησης σε νέο παράθυρο
+              <Phone className="h-4 w-4" />
+              +30 22990 24337
             </a>
           </div>
 
           <div className="space-y-6">
-            <div className="overflow-hidden border border-border">
-              <img
-                src={salonInterior}
-                alt="Εσωτερικό του Coiffure Aspa & Vangel"
-                loading="lazy"
-                width={1536}
-                height={864}
-                className="w-full h-72 object-cover"
-              />
-            </div>
+
 
             <div className="bg-onyx text-ivory p-8 space-y-5">
               <h3 className="font-display text-3xl text-ivory">Επισκέψου μας</h3>
@@ -573,13 +548,8 @@ function Home() {
                 </div>
               </div>
 
-              <div className="flex items-start gap-4">
-                <Mail className="h-4 w-4 text-gold mt-1 shrink-0" />
-                <div>
-                  <div className="text-[10px] tracking-luxury uppercase text-ivory/60">Email</div>
-                  <a href="mailto:info@aspavangel.gr" className="text-sm hover:text-gold transition">info@aspavangel.gr</a>
-                </div>
-              </div>
+
+
 
               <div className="flex items-start gap-4">
                 <Clock className="h-4 w-4 text-gold mt-1 shrink-0" />
@@ -673,22 +643,21 @@ function Home() {
             <div className="font-script text-3xl text-gold">Coiffure</div>
             <div className="font-display text-lg tracking-luxury">ASPA & VANGEL</div>
             <p className="mt-5 text-sm text-ivory/60 max-w-xs font-light leading-relaxed">
-              Κομμωτήριο στο Μαρκόπουλο Μεσογαίας. Από το 2003 δίπλα σου, για την ομορφιά που σου αξίζει.
+              Κομμωτήριο στο Μαρκόπουλο Μεσογαίας.
             </p>
           </div>
           <div className="text-sm space-y-2 text-ivory/75">
             <div className="text-[10px] tracking-luxury uppercase text-gold mb-3">Επικοινωνία</div>
             <div>Λεωφ. Πόρτο Ράφτη 17, Μαρκόπουλο 190 03</div>
             <a href="tel:+302299024337" className="block hover:text-gold transition">+30 22990 24337</a>
-            <a href="mailto:info@aspavangel.gr" className="block hover:text-gold transition">info@aspavangel.gr</a>
           </div>
           <div className="md:text-right">
             <div className="text-[10px] tracking-luxury uppercase text-gold mb-3">Ακολούθησέ μας</div>
             <div className="flex md:justify-end gap-3">
-              <a href="#" aria-label="Instagram" className="h-11 w-11 border border-gold/40 flex items-center justify-center hover:bg-gold hover:text-onyx transition">
+              <a href="https://www.instagram.com/coiffure_aspa_vangel/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="h-11 w-11 border border-gold/40 flex items-center justify-center hover:bg-gold hover:text-onyx transition">
                 <Instagram className="h-4 w-4" />
               </a>
-              <a href="#" aria-label="Facebook" className="h-11 w-11 border border-gold/40 flex items-center justify-center hover:bg-gold hover:text-onyx transition">
+              <a href="https://www.facebook.com/AspaVangel/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="h-11 w-11 border border-gold/40 flex items-center justify-center hover:bg-gold hover:text-onyx transition">
                 <Facebook className="h-4 w-4" />
               </a>
             </div>
