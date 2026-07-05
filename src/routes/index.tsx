@@ -188,7 +188,7 @@ function Home() {
             </h1>
             <p className="mt-8 max-w-xl text-lg text-ivory/70 leading-relaxed font-light">
               Στο Coiffure Aspa & Vangel συνδυάζουμε 20+ χρόνια εμπειρίας, διεθνείς τεχνικές και
-              premium προϊόντα για να αποκαλύψουμε την πιο εκλεπτυσμένη εκδοχή σου — στην καρδιά της Αθήνας.
+              premium προϊόντα για να αποκαλύψουμε την πιο εκλεπτυσμένη εκδοχή σου.
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-4">
               <a
