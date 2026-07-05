@@ -581,59 +581,7 @@ function Home() {
           </div>
         </div>
 
-        {/* CONTACT FORM */}
-        <div className="mx-auto max-w-3xl px-6 mt-24 pt-20 border-t border-border">
-          <div className="text-center mb-10">
-            <span className="font-script text-2xl text-gold-deep">Επικοινωνία</span>
-            <h2 className="font-display text-4xl md:text-5xl mt-2">Στείλε μας μήνυμα</h2>
-            <div className="mx-auto mt-6 h-px w-16 bg-gold" />
-          </div>
 
-          {contactSent ? (
-            <div className="border border-gold/40 bg-gold/5 p-8 text-center">
-              <p className="font-display text-2xl">Το μήνυμά σου παραλήφθηκε</p>
-              <p className="text-muted-foreground mt-2 text-sm">Θα σου απαντήσουμε το συντομότερο.</p>
-            </div>
-          ) : (
-            <form
-              onSubmit={(e) => {
-                e.preventDefault();
-                setContactSent(true);
-              }}
-              className="grid gap-5 md:grid-cols-2"
-            >
-              <input
-                required
-                value={contact.name}
-                onChange={(e) => setContact({ ...contact, name: e.target.value })}
-                placeholder="Όνομα"
-                className="border border-input bg-card px-4 py-3 focus:outline-none focus:border-gold transition"
-              />
-              <input
-                required
-                type="email"
-                value={contact.email}
-                onChange={(e) => setContact({ ...contact, email: e.target.value })}
-                placeholder="Email"
-                className="border border-input bg-card px-4 py-3 focus:outline-none focus:border-gold transition"
-              />
-              <textarea
-                required
-                rows={5}
-                value={contact.message}
-                onChange={(e) => setContact({ ...contact, message: e.target.value })}
-                placeholder="Το μήνυμά σου"
-                className="md:col-span-2 border border-input bg-card px-4 py-3 focus:outline-none focus:border-gold transition resize-none"
-              />
-              <button
-                type="submit"
-                className="md:col-span-2 bg-onyx px-8 py-4 text-ivory text-sm tracking-luxury hover:bg-gold hover:text-onyx transition"
-              >
-                ΑΠΟΣΤΟΛΗ ΜΗΝΥΜΑΤΟΣ
-              </button>
-            </form>
-          )}
-        </div>
       </section>
 
       {/* FOOTER */}
