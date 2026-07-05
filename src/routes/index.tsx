@@ -474,6 +474,9 @@ function Home() {
               ))}
               <span className="ml-2 text-sm text-ivory/80 tracking-wider">4.9 / 5 από 401 κριτικές Google</span>
             </div>
+          </div>
+
+
 
           <div className="grid gap-8 md:grid-cols-3">
             {testimonials.map((t) => (
