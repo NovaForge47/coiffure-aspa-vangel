@@ -252,6 +252,71 @@ function Home() {
         </div>
       </section>
 
+      {/* MASSAGE & SPA PRICING */}
+      <section className="py-24 bg-onyx text-ivory border-y border-gold/20">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="text-center mb-14">
+            <span className="font-script text-2xl text-gold">Massage & Spa</span>
+            <h2 className="font-display text-4xl md:text-5xl mt-2">Τιμοκατάλογος</h2>
+            <div className="mx-auto mt-6 h-px w-16 bg-gold" />
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {[
+              {
+                price: "35€",
+                duration: "30′ λεπτά",
+                items: ["Massage αυχένα", "κεφάλι", "θεραπεία μαλλιών"],
+              },
+              {
+                price: "50€",
+                duration: "45′ λεπτά",
+                items: ["Massage πλάτη", "κεφάλι", "θεραπεία μαλλιών"],
+              },
+              {
+                price: "70€",
+                duration: "90′ λεπτά",
+                items: ["Massage full body", "θεραπεία μαλλιών"],
+              },
+              {
+                price: "90€",
+                duration: "90′ λεπτά",
+                items: ["Massage full body", "θεραπεία μαλλιών", "θεραπεία προσώπου"],
+              },
+            ].map((p) => (
+              <article
+                key={p.price + p.duration}
+                className="border border-gold/30 bg-gradient-to-b from-onyx to-onyx/60 p-8 hover:border-gold transition-colors"
+              >
+                <div className="font-display text-4xl text-gold">{p.price}</div>
+                <div className="mt-1 text-sm uppercase tracking-luxury text-ivory/70">
+                  {p.duration}
+                </div>
+                <div className="mt-5 h-px w-10 bg-gold/50" />
+                <ul className="mt-5 space-y-1.5 text-sm text-ivory/85 font-light">
+                  {p.items.map((it) => (
+                    <li key={it}>{it}</li>
+                  ))}
+                </ul>
+              </article>
+            ))}
+
+            {/* Wednesday offer */}
+            <article className="lg:col-span-2 border border-gold bg-gradient-gold/10 p-8 flex flex-col justify-center items-center text-center">
+              <div className="font-script text-xl text-gold">Προσφορά Τετάρτης</div>
+              <div className="font-display text-6xl text-gold my-3">-30%</div>
+              <div className="mt-2 text-lg font-display">massage 2+1</div>
+              <p className="mt-4 text-sm text-ivory/85 font-light">
+                3 υπηρεσίες massage 90′
+                <br />
+                αξίας <span className="line-through">270€</span> — μόνο{" "}
+                <span className="text-gold font-medium">180€</span>
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
       {/* SERVICES */}
       <section id="services" className="py-32 bg-ivory">
         <div className="mx-auto max-w-7xl px-6">
