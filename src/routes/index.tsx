@@ -468,7 +468,12 @@ function Home() {
             <span className="font-script text-2xl text-gold">Μαρτυρίες</span>
             <h2 className="font-display text-5xl md:text-6xl mt-2 text-ivory">Τι λένε για εμάς</h2>
             <div className="mx-auto mt-6 h-px w-16 bg-gold" />
-          </div>
+            <div className="mt-6 flex items-center justify-center gap-2 text-gold">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} className="h-4 w-4 fill-current" />
+              ))}
+              <span className="ml-2 text-sm text-ivory/80 tracking-wider">4.9 / 5 από 401 κριτικές Google</span>
+            </div>
 
           <div className="grid gap-8 md:grid-cols-3">
             {testimonials.map((t) => (
