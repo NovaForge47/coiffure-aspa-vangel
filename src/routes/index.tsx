@@ -230,7 +230,7 @@ function Home() {
             <div className="absolute -inset-1 bg-gradient-gold opacity-40 blur-2xl" />
             <div className="relative overflow-hidden border border-gold/30">
               <img
-                src={heroImg}
+                src={heroImg.url}
                 alt="Coiffure Aspa & Vangel — luxury hair editorial"
                 className="h-[640px] w-full object-cover"
                 width={1088}
