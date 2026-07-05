@@ -30,11 +30,11 @@ import femaleCutImg from "@/assets/service-female-cut.jpg";
 import maleCutImg from "@/assets/service-male-cut.jpg";
 import extensionsImg from "@/assets/service-extensions.jpg";
 import microringsImg from "@/assets/service-microrings.jpg";
-import gallery1 from "@/assets/hair-gallery-1.jpg";
-import gallery2 from "@/assets/hair-gallery-2.jpg";
-import gallery3 from "@/assets/hair-gallery-3.jpg";
-import gallery4 from "@/assets/hair-gallery-4.jpg";
-import salonInterior from "@/assets/salon-interior-hair.jpg";
+import salonPic1 from "@/assets/salon-0-02-05-4bdfd73b3be5.jpg.asset.json";
+import salonPic2 from "@/assets/salon-0-02-05-6d6aff3177aa.jpg.asset.json";
+import salonPic3 from "@/assets/salon-0-02-05-72d9e687d94f.jpg.asset.json";
+import salonPic4 from "@/assets/salon-0-02-05-8387ac366cf8.jpg.asset.json";
+import salonPic5 from "@/assets/salon-0-02-05-d8e786f74e1f.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Home,
