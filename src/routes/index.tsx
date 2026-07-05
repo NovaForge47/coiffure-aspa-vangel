@@ -23,7 +23,7 @@ import koreanSpa2 from "@/assets/korean-spa-2.jpg.asset.json";
 import koreanSpa3 from "@/assets/korean-spa-3.jpg.asset.json";
 import koreanSpa4 from "@/assets/korean-spa-4.jpg.asset.json";
 
-import heroImg from "@/assets/hero-hair.jpg";
+import heroImg from "@/assets/hero-korean-spa.jpg.asset.json";
 import coloringImg from "@/assets/service-coloring.jpg";
 import makeupImg from "@/assets/service-makeup.jpg";
 import femaleCutImg from "@/assets/service-female-cut.jpg";
@@ -42,46 +42,67 @@ export const Route = createFileRoute("/")({
 
 const services = [
   {
-    title: "Βαφές & Ανταύγειες",
-    desc: "Balayage, ombré, ολική βαφή και πολύχρωμες ανταύγειες με premium χρώματα χωρίς αμμωνία.",
-    img: coloringImg,
-    icon: Palette,
-    price: "€45 – €120",
-  },
-  {
-    title: "Makeup",
-    desc: "Day, evening, bridal makeup από επαγγελματίες με υψηλής ποιότητας προϊόντα μακράς διάρκειας.",
-    img: makeupImg,
-    icon: Brush,
-    price: "€40 – €90",
-  },
-  {
     title: "Γυναικείο Κούρεμα",
     desc: "Κούρεμα σχεδιασμένο γύρω από το πρόσωπο και τον τρόπο ζωής σου, με λούσιμο και styling.",
     img: femaleCutImg,
     icon: Scissors,
-    price: "€25 – €45",
+    price: "13€",
   },
   {
     title: "Ανδρικό Κούρεμα",
-    desc: "Classic, modern ή fade κουρέματα με ξύρισμα κλασικού στυλ και περιποίηση γενιού.",
+    desc: "Classic, modern ή fade κουρέματα με προσοχή στη λεπτομέρεια.",
     img: maleCutImg,
     icon: Crown,
-    price: "€18 – €28",
+    price: "11€",
+  },
+  {
+    title: "Βαφή",
+    desc: "Ολική βαφή με premium χρώματα για λαμπερό και ανθεκτικό αποτέλεσμα.",
+    img: coloringImg,
+    icon: Palette,
+    price: "27€",
+  },
+  {
+    title: "Ρίζες & Άκρες",
+    desc: "Ανανέωση χρώματος από ρίζα έως άκρη για ομοιόμορφο, φρέσκο αποτέλεσμα.",
+    img: coloringImg,
+    icon: Palette,
+    price: "40€",
+  },
+  {
+    title: "Ανταύγειες",
+    desc: "Πολυδιάστατες ανταύγειες σε όλη την κεφαλή για φυσικό, φωτεινό αποτέλεσμα.",
+    img: coloringImg,
+    icon: Sparkles,
+    price: "60€",
+  },
+  {
+    title: "Ανταύγειες Μισή Κεφαλή",
+    desc: "Ανταύγειες στο επάνω μέρος για διακριτική ανανέωση και φως στο πρόσωπο.",
+    img: coloringImg,
+    icon: Sparkles,
+    price: "40€",
+  },
+  {
+    title: "Makeup",
+    desc: "Day, evening & bridal makeup από επαγγελματίες με υψηλής ποιότητας προϊόντα μακράς διάρκειας.",
+    img: makeupImg,
+    icon: Brush,
+    price: "40€",
   },
   {
     title: "Hair Extensions",
-    desc: "Φυσικά Remy extensions σε όλα τα μήκη και χρώματα. Συμβουλευτική και τοποθέτηση από ειδικούς.",
+    desc: "Φυσικά Remy extensions σε όλα τα μήκη και χρώματα, με τοποθέτηση από ειδικούς.",
     img: extensionsImg,
     icon: Sparkles,
-    price: "€180 – €650",
+    price: "3€ / τούφα",
   },
   {
-    title: "Micro Rings",
-    desc: "Διακριτική, μη-κολλητική τεχνική για όγκο και μήκος που διαρκεί έως 6 μήνες χωρίς ζημιά.",
+    title: "Micro Ring",
+    desc: "Διακριτική, μη-κολλητική τεχνική για όγκο και μήκος που διαρκεί χωρίς ζημιά.",
     img: microringsImg,
     icon: Gem,
-    price: "€220 – €550",
+    price: "4€ / τούφα",
   },
 ];
 
@@ -209,7 +230,7 @@ function Home() {
             <div className="absolute -inset-1 bg-gradient-gold opacity-40 blur-2xl" />
             <div className="relative overflow-hidden border border-gold/30">
               <img
-                src={heroImg}
+                src={heroImg.url}
                 alt="Coiffure Aspa & Vangel — luxury hair editorial"
                 className="h-[640px] w-full object-cover"
                 width={1088}
