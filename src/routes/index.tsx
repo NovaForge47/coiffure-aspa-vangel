@@ -30,11 +30,11 @@ import femaleCutImg from "@/assets/service-female-cut.jpg";
 import maleCutImg from "@/assets/service-male-cut.jpg";
 import extensionsImg from "@/assets/service-extensions.jpg";
 import microringsImg from "@/assets/service-microrings.jpg";
-import salonPic1 from "@/assets/salon-0-02-05-4bdfd73b3be5.jpg.asset.json";
-import salonPic2 from "@/assets/salon-0-02-05-6d6aff3177aa.jpg.asset.json";
-import salonPic3 from "@/assets/salon-0-02-05-72d9e687d94f.jpg.asset.json";
-import salonPic4 from "@/assets/salon-0-02-05-8387ac366cf8.jpg.asset.json";
-import salonPic5 from "@/assets/salon-0-02-05-d8e786f74e1f.jpg.asset.json";
+import salonPic1 from "@/assets/Screenshot-2026-07-05-130249.png.asset.json";
+import salonPic2 from "@/assets/Screenshot-2026-07-05-130602.png.asset.json";
+import salonPic3 from "@/assets/Screenshot-2026-07-05-130610.png.asset.json";
+import salonPic4 from "@/assets/Screenshot-2026-07-05-130630.png.asset.json";
+import salonPic5 from "@/assets/Screenshot-2026-07-05-130653.png.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Home,
@@ -206,11 +206,10 @@ function Home() {
               </a>
             </div>
 
-            <div className="mt-16 grid grid-cols-3 gap-6 max-w-md border-t border-gold/20 pt-8">
+            <div className="mt-16 grid grid-cols-2 gap-6 max-w-md border-t border-gold/20 pt-8">
               {[
                 ["20+", "Χρόνια εμπειρίας"],
                 ["4.9★", "Google Reviews"],
-                ["8K+", "Happy Clients"],
               ].map(([k, v]) => (
                 <div key={k}>
                   <div className="font-display text-4xl text-gold">{k}</div>
@@ -428,10 +427,6 @@ function Home() {
               <span className="font-script text-2xl text-gold-deep">Atelier</span>
               <h2 className="font-display text-5xl md:text-6xl mt-2">Στιγμές από το Salon</h2>
             </div>
-            <p className="max-w-md text-muted-foreground font-light">
-              Χρώματα, υφές, εργαλεία και χώροι — τα στοιχεία που συνθέτουν την εμπειρία Coiffure
-              Aspa & Vangel.
-            </p>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 auto-rows-[200px]">
@@ -463,7 +458,7 @@ function Home() {
       <section id="testimonials" className="py-32 bg-gradient-onyx text-ivory">
         <div className="mx-auto max-w-7xl px-6">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="font-script text-2xl text-gold">Μαρτυρίες</span>
+            
             <h2 className="font-display text-5xl md:text-6xl mt-2 text-ivory">Τι λένε για εμάς</h2>
             <div className="mx-auto mt-6 h-px w-16 bg-gold" />
             <div className="mt-6 flex items-center justify-center gap-2 text-gold">
@@ -508,7 +503,7 @@ function Home() {
       <section id="contact" className="py-32 bg-background">
         <div className="mx-auto max-w-7xl px-6 grid gap-16 lg:grid-cols-2">
           <div id="booking">
-            <span className="font-script text-2xl text-gold-deep">Online Booking</span>
+            
             <h2 className="font-display text-5xl md:text-6xl mt-2">Κλείσε το ραντεβού σου</h2>
             <div className="mt-6 h-px w-16 bg-gold" />
             <p className="mt-6 text-muted-foreground max-w-md font-light">
@@ -610,7 +605,7 @@ function Home() {
           </div>
         </div>
         <div className="mx-auto max-w-7xl px-6 mt-12 pt-6 border-t border-ivory/10 text-[10px] text-ivory/40 text-center tracking-luxury uppercase">
-          © {new Date().getFullYear()} Coiffure Aspa & Vangel · Crafted with Devotion
+          © {new Date().getFullYear()} Coiffure Aspa & Vangel · Designed By Nexus Media
         </div>
       </footer>
     </div>
