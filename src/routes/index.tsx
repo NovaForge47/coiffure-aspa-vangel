@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState } from "react";
+
 import {
   Scissors,
   Brush,
@@ -10,7 +10,7 @@ import {
   Star,
   MapPin,
   Phone,
-  Mail,
+  
   Clock,
   Instagram,
   Facebook,
@@ -30,11 +30,11 @@ import femaleCutImg from "@/assets/service-female-cut.jpg";
 import maleCutImg from "@/assets/service-male-cut.jpg";
 import extensionsImg from "@/assets/service-extensions.jpg";
 import microringsImg from "@/assets/service-microrings.jpg";
-import gallery1 from "@/assets/hair-gallery-1.jpg";
-import gallery2 from "@/assets/hair-gallery-2.jpg";
-import gallery3 from "@/assets/hair-gallery-3.jpg";
-import gallery4 from "@/assets/hair-gallery-4.jpg";
-import salonInterior from "@/assets/salon-interior-hair.jpg";
+import salonPic1 from "@/assets/salon-0-02-05-4bdfd73b3be5.jpg.asset.json";
+import salonPic2 from "@/assets/salon-0-02-05-6d6aff3177aa.jpg.asset.json";
+import salonPic3 from "@/assets/salon-0-02-05-72d9e687d94f.jpg.asset.json";
+import salonPic4 from "@/assets/salon-0-02-05-8387ac366cf8.jpg.asset.json";
+import salonPic5 from "@/assets/salon-0-02-05-d8e786f74e1f.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Home,
@@ -108,29 +108,25 @@ const services = [
 
 const testimonials = [
   {
-    name: "Μαρία Παπαδοπούλου",
-    text: "Η Άσπα είναι μάστερ στο balayage. Το χρώμα κράτησε μήνες, τα μαλλιά μου ποτέ δεν ήταν τόσο υγιή και λαμπερά.",
-    role: "Πελάτισσα από το 2019",
+    name: "Daniela Piuca",
+    text: "Best service by far in the area, experts in all hair styles and makeup. I definitely recommend it.",
   },
   {
-    name: "Κατερίνα Νικολάου",
-    text: "Έβαλα extensions και κανείς δεν καταλαβαίνει ότι δεν είναι δικά μου. Επαγγελματισμός σε άλλο επίπεδο.",
-    role: "Πελάτισσα από το 2021",
+    name: "D. Tsiou",
+    text: "Great haircut, nice experience, always happy to go back.",
   },
   {
-    name: "Γιώργος Αντωνίου",
-    text: "Ο Βαγγέλης είναι ο μόνος που έχω εμπιστευτεί τα μαλλιά μου τα τελευταία 5 χρόνια. Πάντα τέλειο αποτέλεσμα.",
-    role: "Πελάτης από το 2020",
+    name: "Aranya Vijayan",
+    text: "Aspa & Vangel is the best hair salon in Athens. I read a lot of positive reviews on Google before booking an appointment, and I realized why they receive only positive reviews and 5 star ratings. Their service is excellent, experienced staff, very polite, friendly and approachable to customers at the same time maintained professionalism.",
   },
 ];
 
 const gallery = [
-  { src: gallery1, label: "Color Swatches" },
-  { src: gallery2, label: "Copper Glow" },
-  { src: gallery3, label: "The Salon" },
-  { src: gallery4, label: "Styling Tools" },
-  { src: extensionsImg, label: "Extensions" },
-  { src: microringsImg, label: "Micro Rings" },
+  { src: salonPic1.url, label: "Salon" },
+  { src: salonPic2.url, label: "Salon" },
+  { src: salonPic3.url, label: "Salon" },
+  { src: salonPic4.url, label: "Salon" },
+  { src: salonPic5.url, label: "Salon" },
 ];
 
 const hours = [
@@ -146,8 +142,6 @@ const hours = [
 const koreanSpaImages = [koreanSpa1, koreanSpa2, koreanSpa3, koreanSpa4];
 
 function Home() {
-  const [contact, setContact] = useState({ name: "", email: "", message: "" });
-  const [contactSent, setContactSent] = useState(false);
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -472,7 +466,15 @@ function Home() {
             <span className="font-script text-2xl text-gold">Μαρτυρίες</span>
             <h2 className="font-display text-5xl md:text-6xl mt-2 text-ivory">Τι λένε για εμάς</h2>
             <div className="mx-auto mt-6 h-px w-16 bg-gold" />
+            <div className="mt-6 flex items-center justify-center gap-2 text-gold">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} className="h-4 w-4 fill-current" />
+              ))}
+              <span className="ml-2 text-sm text-ivory/80 tracking-wider">4.9 / 5 από 401 κριτικές Google</span>
+            </div>
           </div>
+
+
 
           <div className="grid gap-8 md:grid-cols-3">
             {testimonials.map((t) => (
@@ -494,7 +496,6 @@ function Home() {
                   </div>
                   <div>
                     <div className="font-medium text-ivory text-sm">{t.name}</div>
-                    <div className="text-xs text-ivory/55 tracking-wider mt-0.5">{t.role}</div>
                   </div>
                 </div>
               </div>
@@ -511,43 +512,19 @@ function Home() {
             <h2 className="font-display text-5xl md:text-6xl mt-2">Κλείσε το ραντεβού σου</h2>
             <div className="mt-6 h-px w-16 bg-gold" />
             <p className="mt-6 text-muted-foreground max-w-md font-light">
-              Κλείσε ραντεβού online σε χρόνο μηδέν. Διάλεξε υπηρεσία, ημερομηνία και ώρα
-              απευθείας από το ημερολόγιό μας — επιβεβαίωση άμεσα.
+              Κλείσε ραντεβού τηλεφωνικά ή περνώντας από το κατάστημα — θα χαρούμε να σε εξυπηρετήσουμε.
             </p>
-
-            <div className="mt-8 border border-gold/30 bg-card overflow-hidden">
-              <iframe
-                src="https://nexusnkz9.setmore.com"
-                title="Online Κράτηση — Coiffure Aspa & Vangel"
-                className="w-full"
-                style={{ border: 0, height: 720 }}
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
-            </div>
-
             <a
-              href="https://nexusnkz9.setmore.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-4 inline-flex items-center gap-2 text-sm tracking-luxury text-gold-deep hover:text-gold transition"
+              href="tel:+302299024337"
+              className="mt-8 inline-flex items-center gap-3 bg-gold px-9 py-4 text-sm tracking-luxury text-onyx shadow-gold hover:bg-gold-light transition"
             >
-              <Calendar className="h-4 w-4" />
-              Άνοιγμα κράτησης σε νέο παράθυρο
+              <Phone className="h-4 w-4" />
+              +30 22990 24337
             </a>
           </div>
 
           <div className="space-y-6">
-            <div className="overflow-hidden border border-border">
-              <img
-                src={salonInterior}
-                alt="Εσωτερικό του Coiffure Aspa & Vangel"
-                loading="lazy"
-                width={1536}
-                height={864}
-                className="w-full h-72 object-cover"
-              />
-            </div>
+
 
             <div className="bg-onyx text-ivory p-8 space-y-5">
               <h3 className="font-display text-3xl text-ivory">Επισκέψου μας</h3>
@@ -569,13 +546,8 @@ function Home() {
                 </div>
               </div>
 
-              <div className="flex items-start gap-4">
-                <Mail className="h-4 w-4 text-gold mt-1 shrink-0" />
-                <div>
-                  <div className="text-[10px] tracking-luxury uppercase text-ivory/60">Email</div>
-                  <a href="mailto:info@aspavangel.gr" className="text-sm hover:text-gold transition">info@aspavangel.gr</a>
-                </div>
-              </div>
+
+
 
               <div className="flex items-start gap-4">
                 <Clock className="h-4 w-4 text-gold mt-1 shrink-0" />
@@ -607,59 +579,7 @@ function Home() {
           </div>
         </div>
 
-        {/* CONTACT FORM */}
-        <div className="mx-auto max-w-3xl px-6 mt-24 pt-20 border-t border-border">
-          <div className="text-center mb-10">
-            <span className="font-script text-2xl text-gold-deep">Επικοινωνία</span>
-            <h2 className="font-display text-4xl md:text-5xl mt-2">Στείλε μας μήνυμα</h2>
-            <div className="mx-auto mt-6 h-px w-16 bg-gold" />
-          </div>
 
-          {contactSent ? (
-            <div className="border border-gold/40 bg-gold/5 p-8 text-center">
-              <p className="font-display text-2xl">Το μήνυμά σου παραλήφθηκε</p>
-              <p className="text-muted-foreground mt-2 text-sm">Θα σου απαντήσουμε το συντομότερο.</p>
-            </div>
-          ) : (
-            <form
-              onSubmit={(e) => {
-                e.preventDefault();
-                setContactSent(true);
-              }}
-              className="grid gap-5 md:grid-cols-2"
-            >
-              <input
-                required
-                value={contact.name}
-                onChange={(e) => setContact({ ...contact, name: e.target.value })}
-                placeholder="Όνομα"
-                className="border border-input bg-card px-4 py-3 focus:outline-none focus:border-gold transition"
-              />
-              <input
-                required
-                type="email"
-                value={contact.email}
-                onChange={(e) => setContact({ ...contact, email: e.target.value })}
-                placeholder="Email"
-                className="border border-input bg-card px-4 py-3 focus:outline-none focus:border-gold transition"
-              />
-              <textarea
-                required
-                rows={5}
-                value={contact.message}
-                onChange={(e) => setContact({ ...contact, message: e.target.value })}
-                placeholder="Το μήνυμά σου"
-                className="md:col-span-2 border border-input bg-card px-4 py-3 focus:outline-none focus:border-gold transition resize-none"
-              />
-              <button
-                type="submit"
-                className="md:col-span-2 bg-onyx px-8 py-4 text-ivory text-sm tracking-luxury hover:bg-gold hover:text-onyx transition"
-              >
-                ΑΠΟΣΤΟΛΗ ΜΗΝΥΜΑΤΟΣ
-              </button>
-            </form>
-          )}
-        </div>
       </section>
 
       {/* FOOTER */}
@@ -669,22 +589,21 @@ function Home() {
             <div className="font-script text-3xl text-gold">Coiffure</div>
             <div className="font-display text-lg tracking-luxury">ASPA & VANGEL</div>
             <p className="mt-5 text-sm text-ivory/60 max-w-xs font-light leading-relaxed">
-              Κομμωτήριο στο Μαρκόπουλο Μεσογαίας. Από το 2003 δίπλα σου, για την ομορφιά που σου αξίζει.
+              Κομμωτήριο στο Μαρκόπουλο Μεσογαίας.
             </p>
           </div>
           <div className="text-sm space-y-2 text-ivory/75">
             <div className="text-[10px] tracking-luxury uppercase text-gold mb-3">Επικοινωνία</div>
             <div>Λεωφ. Πόρτο Ράφτη 17, Μαρκόπουλο 190 03</div>
             <a href="tel:+302299024337" className="block hover:text-gold transition">+30 22990 24337</a>
-            <a href="mailto:info@aspavangel.gr" className="block hover:text-gold transition">info@aspavangel.gr</a>
           </div>
           <div className="md:text-right">
             <div className="text-[10px] tracking-luxury uppercase text-gold mb-3">Ακολούθησέ μας</div>
             <div className="flex md:justify-end gap-3">
-              <a href="#" aria-label="Instagram" className="h-11 w-11 border border-gold/40 flex items-center justify-center hover:bg-gold hover:text-onyx transition">
+              <a href="https://www.instagram.com/coiffure_aspa_vangel/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="h-11 w-11 border border-gold/40 flex items-center justify-center hover:bg-gold hover:text-onyx transition">
                 <Instagram className="h-4 w-4" />
               </a>
-              <a href="#" aria-label="Facebook" className="h-11 w-11 border border-gold/40 flex items-center justify-center hover:bg-gold hover:text-onyx transition">
+              <a href="https://www.facebook.com/AspaVangel/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="h-11 w-11 border border-gold/40 flex items-center justify-center hover:bg-gold hover:text-onyx transition">
                 <Facebook className="h-4 w-4" />
               </a>
             </div>
