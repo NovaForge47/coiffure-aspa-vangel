@@ -108,29 +108,25 @@ const services = [
 
 const testimonials = [
   {
-    name: "Μαρία Παπαδοπούλου",
-    text: "Η Άσπα είναι μάστερ στο balayage. Το χρώμα κράτησε μήνες, τα μαλλιά μου ποτέ δεν ήταν τόσο υγιή και λαμπερά.",
-    role: "Πελάτισσα από το 2019",
+    name: "Daniela Piuca",
+    text: "Best service by far in the area, experts in all hair styles and makeup. I definitely recommend it.",
   },
   {
-    name: "Κατερίνα Νικολάου",
-    text: "Έβαλα extensions και κανείς δεν καταλαβαίνει ότι δεν είναι δικά μου. Επαγγελματισμός σε άλλο επίπεδο.",
-    role: "Πελάτισσα από το 2021",
+    name: "D. Tsiou",
+    text: "Great haircut, nice experience, always happy to go back.",
   },
   {
-    name: "Γιώργος Αντωνίου",
-    text: "Ο Βαγγέλης είναι ο μόνος που έχω εμπιστευτεί τα μαλλιά μου τα τελευταία 5 χρόνια. Πάντα τέλειο αποτέλεσμα.",
-    role: "Πελάτης από το 2020",
+    name: "Aranya Vijayan",
+    text: "Aspa & Vangel is the best hair salon in Athens. I read a lot of positive reviews on Google before booking an appointment, and I realized why they receive only positive reviews and 5 star ratings. Their service is excellent, experienced staff, very polite, friendly and approachable to customers at the same time maintained professionalism.",
   },
 ];
 
 const gallery = [
-  { src: gallery1, label: "Color Swatches" },
-  { src: gallery2, label: "Copper Glow" },
-  { src: gallery3, label: "The Salon" },
-  { src: gallery4, label: "Styling Tools" },
-  { src: extensionsImg, label: "Extensions" },
-  { src: microringsImg, label: "Micro Rings" },
+  { src: salonPic1.url, label: "Salon" },
+  { src: salonPic2.url, label: "Salon" },
+  { src: salonPic3.url, label: "Salon" },
+  { src: salonPic4.url, label: "Salon" },
+  { src: salonPic5.url, label: "Salon" },
 ];
 
 const hours = [
