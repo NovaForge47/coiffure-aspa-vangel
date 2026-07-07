@@ -503,19 +503,28 @@ function Home() {
       <section id="contact" className="py-32 bg-background">
         <div className="mx-auto max-w-7xl px-6 grid gap-16 lg:grid-cols-2">
           <div id="booking">
-            
             <h2 className="font-display text-5xl md:text-6xl mt-2">Κλείσε το ραντεβού σου</h2>
             <div className="mt-6 h-px w-16 bg-gold" />
             <p className="mt-6 text-muted-foreground max-w-md font-light">
               Κλείσε ραντεβού τηλεφωνικά ή περνώντας από το κατάστημα — θα χαρούμε να σε εξυπηρετήσουμε.
             </p>
-            <a
-              href="tel:+302299024337"
-              className="mt-8 inline-flex items-center gap-3 bg-gold px-9 py-4 text-sm tracking-luxury text-onyx shadow-gold hover:bg-gold-light transition"
-            >
-              <Phone className="h-4 w-4" />
-              +30 22990 24337
-            </a>
+            <div className="mt-8 space-y-4">
+              <iframe
+                title="Setmore Booking"
+                src="https://aspapmps.setmore.com/aspa"
+                width="100%"
+                height="600"
+                style={{ border: 0, maxWidth: "100%" }}
+                loading="lazy"
+              />
+              <a
+                href="tel:+302299024337"
+                className="inline-flex items-center gap-3 bg-gold px-9 py-4 text-sm tracking-luxury text-onyx shadow-gold hover:bg-gold-light transition"
+              >
+                <Phone className="h-4 w-4" />
+                +30 22990 24337
+              </a>
+            </div>
           </div>
 
           <div className="space-y-6">
