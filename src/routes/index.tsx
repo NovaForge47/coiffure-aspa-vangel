@@ -128,6 +128,7 @@ const gallery = [
   { src: salonPic3.url, label: "Salon" },
   { src: salonPic4.url, label: "Salon" },
   { src: salonPic5.url, label: "Salon" },
+  { src: salonPic6.url, label: "Salon" },
 ];
 
 const hours = [
