@@ -36,6 +36,11 @@ import salonPic3 from "@/assets/salon-new-3.jpg.asset.json";
 import salonPic4 from "@/assets/salon-new-4.jpg.asset.json";
 import salonPic5 from "@/assets/salon-new-5.jpg.asset.json";
 import salonPic6 from "@/assets/salon-new-6.jpg.asset.json";
+import salonPic7 from "@/assets/salon-new-7.jpg.asset.json";
+import salonPic8 from "@/assets/salon-new-8.jpg.asset.json";
+import salonPic9 from "@/assets/salon-new-9.jpg.asset.json";
+import salonPic10 from "@/assets/salon-new-10.jpg.asset.json";
+import salonPic11 from "@/assets/salon-new-11.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Home,
