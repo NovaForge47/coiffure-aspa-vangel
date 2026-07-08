@@ -30,11 +30,12 @@ import femaleCutImg from "@/assets/service-female-cut.jpg";
 import maleCutImg from "@/assets/service-male-cut.jpg";
 import extensionsImg from "@/assets/service-extensions.jpg";
 import microringsImg from "@/assets/service-microrings.jpg";
-import salonPic1 from "@/assets/Screenshot-2026-07-05-130249.png.asset.json";
-import salonPic2 from "@/assets/Screenshot-2026-07-05-130602.png.asset.json";
-import salonPic3 from "@/assets/Screenshot-2026-07-05-130610.png.asset.json";
-import salonPic4 from "@/assets/Screenshot-2026-07-05-130630.png.asset.json";
-import salonPic5 from "@/assets/Screenshot-2026-07-05-130653.png.asset.json";
+import salonPic1 from "@/assets/salon-new-1.jpg.asset.json";
+import salonPic2 from "@/assets/salon-new-2.jpg.asset.json";
+import salonPic3 from "@/assets/salon-new-3.jpg.asset.json";
+import salonPic4 from "@/assets/salon-new-4.jpg.asset.json";
+import salonPic5 from "@/assets/salon-new-5.jpg.asset.json";
+import salonPic6 from "@/assets/salon-new-6.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Home,
@@ -127,6 +128,7 @@ const gallery = [
   { src: salonPic3.url, label: "Salon" },
   { src: salonPic4.url, label: "Salon" },
   { src: salonPic5.url, label: "Salon" },
+  { src: salonPic6.url, label: "Salon" },
 ];
 
 const hours = [
