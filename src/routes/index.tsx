@@ -134,6 +134,11 @@ const gallery = [
   { src: salonPic4.url, label: "Salon" },
   { src: salonPic5.url, label: "Salon" },
   { src: salonPic6.url, label: "Salon" },
+  { src: salonPic7.url, label: "Salon" },
+  { src: salonPic8.url, label: "Salon" },
+  { src: salonPic9.url, label: "Salon" },
+  { src: salonPic10.url, label: "Salon" },
+  { src: salonPic11.url, label: "Salon" },
 ];
 
 const hours = [
