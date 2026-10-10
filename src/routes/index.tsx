@@ -43,16 +43,6 @@ import salonPic10 from "@/assets/salon-new-10.jpg.asset.json";
 import salonPic11 from "@/assets/salon-new-11.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "Web page didn't load | Coiffure Aspa & Vangel" },
-      { name: "description", content: "Web page didn't load. Please try again later." },
-      { property: "og:title", content: "Web page didn't load | Coiffure Aspa & Vangel" },
-      { property: "og:description", content: "Web page didn't load. Please try again later." },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-    ],
-  }),
   component: Home,
 });
 
@@ -164,21 +154,6 @@ const hours = [
 const koreanSpaImages = [koreanSpa1, koreanSpa2, koreanSpa3, koreanSpa4];
 
 function Home() {
-  return (
-    <div className="flex min-h-screen items-center justify-center bg-background px-4">
-      <div className="max-w-md text-center">
-        <h1 className="text-xl font-semibold text-foreground">
-          Web page didn't load
-        </h1>
-        <p className="mt-2 text-sm text-muted-foreground">
-          Please try again later.
-        </p>
-      </div>
-    </div>
-  );
-}
-
-function HomeOriginal() {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
