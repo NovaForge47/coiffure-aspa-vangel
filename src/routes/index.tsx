@@ -18,29 +18,29 @@ import {
   Droplets,
 } from "lucide-react";
 
-import koreanSpa1 from "@/assets/korean-spa-1.jpg.asset.json";
-import koreanSpa2 from "@/assets/korean-spa-2.jpg.asset.json";
-import koreanSpa3 from "@/assets/korean-spa-3.jpg.asset.json";
-import koreanSpa4 from "@/assets/korean-spa-4.jpg.asset.json";
+const koreanSpa1 = "/images/korean-spa-1.jpg";
+const koreanSpa2 = "/images/korean-spa-2.jpg";
+const koreanSpa3 = "/images/korean-spa-3.jpg";
+const koreanSpa4 = "/images/korean-spa-4.jpg";
 
-import heroImg from "@/assets/hero-korean-spa.jpg.asset.json";
+const heroImg = "/images/hero-korean-spa.jpg";
 import coloringImg from "@/assets/service-coloring.jpg";
 import makeupImg from "@/assets/service-makeup.jpg";
 import femaleCutImg from "@/assets/service-female-cut.jpg";
 import maleCutImg from "@/assets/service-male-cut.jpg";
 import extensionsImg from "@/assets/service-extensions.jpg";
 import microringsImg from "@/assets/service-microrings.jpg";
-import salonPic1 from "@/assets/salon-new-1.jpg.asset.json";
-import salonPic2 from "@/assets/salon-new-2.jpg.asset.json";
-import salonPic3 from "@/assets/salon-new-3.jpg.asset.json";
-import salonPic4 from "@/assets/salon-new-4.jpg.asset.json";
-import salonPic5 from "@/assets/salon-new-5.jpg.asset.json";
-import salonPic6 from "@/assets/salon-new-6.jpg.asset.json";
-import salonPic7 from "@/assets/salon-new-7.jpg.asset.json";
-import salonPic8 from "@/assets/salon-new-8.jpg.asset.json";
-import salonPic9 from "@/assets/salon-new-9.jpg.asset.json";
-import salonPic10 from "@/assets/salon-new-10.jpg.asset.json";
-import salonPic11 from "@/assets/salon-new-11.jpg.asset.json";
+const salonPic1 = "/images/salon-new-1.jpg";
+const salonPic2 = "/images/salon-new-2.jpg";
+const salonPic3 = "/images/salon-new-3.jpg";
+const salonPic4 = "/images/salon-new-4.jpg";
+const salonPic5 = "/images/salon-new-5.jpg";
+const salonPic6 = "/images/salon-new-6.jpg";
+const salonPic7 = "/images/salon-new-7.jpg";
+const salonPic8 = "/images/salon-new-8.jpg";
+const salonPic9 = "/images/salon-new-9.jpg";
+const salonPic10 = "/images/salon-new-10.jpg";
+const salonPic11 = "/images/salon-new-11.jpg";
 
 export const Route = createFileRoute("/")({
   component: Home,
@@ -128,17 +128,17 @@ const testimonials = [
 ];
 
 const gallery = [
-  { src: salonPic1.url, label: "Salon" },
-  { src: salonPic2.url, label: "Salon" },
-  { src: salonPic3.url, label: "Salon" },
-  { src: salonPic4.url, label: "Salon" },
-  { src: salonPic5.url, label: "Salon" },
-  { src: salonPic6.url, label: "Salon" },
-  { src: salonPic7.url, label: "Salon" },
-  { src: salonPic8.url, label: "Salon" },
-  { src: salonPic9.url, label: "Salon" },
-  { src: salonPic10.url, label: "Salon" },
-  { src: salonPic11.url, label: "Salon" },
+  { src: salonPic1, label: "Salon" },
+  { src: salonPic2, label: "Salon" },
+  { src: salonPic3, label: "Salon" },
+  { src: salonPic4, label: "Salon" },
+  { src: salonPic5, label: "Salon" },
+  { src: salonPic6, label: "Salon" },
+  { src: salonPic7, label: "Salon" },
+  { src: salonPic8, label: "Salon" },
+  { src: salonPic9, label: "Salon" },
+  { src: salonPic10, label: "Salon" },
+  { src: salonPic11, label: "Salon" },
 ];
 
 const hours = [
@@ -235,7 +235,7 @@ function Home() {
             <div className="absolute -inset-1 bg-gradient-gold opacity-40 blur-2xl" />
             <div className="relative overflow-hidden border border-gold/30">
               <img
-                src={heroImg.url}
+                src={heroImg}
                 alt="Coiffure Aspa & Vangel — luxury hair editorial"
                 className="h-[640px] w-full object-cover"
                 width={1088}
@@ -419,7 +419,7 @@ function Home() {
                   }`}
                 >
                   <img
-                    src={img.url}
+                    src={img}
                     alt={`Korean Spa θεραπεία ${i + 1}`}
                     loading="lazy"
                     className="h-full w-full object-cover hover:scale-105 transition duration-700"
